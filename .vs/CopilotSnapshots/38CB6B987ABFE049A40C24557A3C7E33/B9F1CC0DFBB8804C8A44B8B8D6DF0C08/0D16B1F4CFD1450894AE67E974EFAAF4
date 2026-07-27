@@ -1,0 +1,41 @@
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Persistence.Contexts;
+using System;
+
+namespace API.Extensions
+{
+    public static class HealthCheckExtensions
+    {
+        public static IServiceCollection AddHealthCheckExtension(this IServiceCollection services, IConfiguration config)
+        {
+            services.AddHealthChecks()
+                .AddDbContextCheck<StoreContext>(
+                    name: "StoreContext-check",
+                    failureStatus: HealthStatus.Degraded,
+                    tags: new[] { "db", "postgresql" })
+                .AddRedis(
+                    config.GetConnectionString("Redis"),
+                    name: "redis-check",
+                    failureStatus: HealthStatus.Degraded,
+                    tags: new[] { "redis", "cache" })
+                .AddNpgSql(
+                    config.GetConnectionString("DefaultConnection"),
+                    name: "postgresql-check",
+                    failureStatus: HealthStatus.Degraded,
+                    tags: new[] { "db", "postgresql" });
+
+            // Configure HealthChecks UI with PostgreSQL storage
+            services.AddHealthChecksUI(setup =>
+            {
+                setup.SetEvaluationTimeInSeconds(60); // Check every 60 seconds
+                setup.MaximumHistoryEntriesPerEndpoint(50);
+                setup.AddHealthCheckEndpoint("API Health Check", "/health");
+            })
+            .AddPostgreSqlStorage(config.GetConnectionString("DefaultConnection"));
+
+            return services;
+        }
+    }
+}

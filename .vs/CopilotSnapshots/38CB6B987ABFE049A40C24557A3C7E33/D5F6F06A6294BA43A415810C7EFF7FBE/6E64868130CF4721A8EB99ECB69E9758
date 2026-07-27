@@ -1,0 +1,29 @@
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+
+namespace API.Extensions
+{
+    // Lightweight health check registrations that do not depend on application-specific
+    // database, Redis, or domain types. This keeps the API runnable in this workspace.
+    public static class HealthCheckExtensions
+    {
+        public static IServiceCollection AddHealthCheckExtension(this IServiceCollection services, IConfiguration config)
+        {
+            // Basic self-check
+            services.AddHealthChecks()
+                .AddCheck("self", () => HealthCheckResult.Healthy(), tags: new[] { "self" });
+
+            // Configure HealthChecks UI with in-memory storage so no external database is required.
+            services.AddHealthChecksUI(setup =>
+            {
+                setup.SetEvaluationTimeInSeconds(60);
+                setup.MaximumHistoryEntriesPerEndpoint(50);
+                setup.AddHealthCheckEndpoint("API Health Check", "/health");
+            })
+            .AddInMemoryStorage();
+
+            return services;
+        }
+    }
+}

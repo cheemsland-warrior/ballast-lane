@@ -1,0 +1,6 @@
+@ballast_lane_api_HostAddress = http://localhost:5159
+
+GET {{ballast_lane_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

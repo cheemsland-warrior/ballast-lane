@@ -33,7 +33,7 @@ namespace API.Extensions
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Skinet API v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Public Potholes");
                 c.InjectStylesheet("/assets/swagger-ui-theme/material-theme.css");
             });
 

@@ -2,202 +2,6 @@
   "version": 4,
   "targets": {
     "net10.0": {
-      "Asp.Versioning.Abstractions/8.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Asp.Versioning.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Asp.Versioning.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Asp.Versioning.Http/8.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Asp.Versioning.Abstractions": "8.1.0"
-        },
-        "compile": {
-          "lib/net8.0/Asp.Versioning.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Asp.Versioning.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Asp.Versioning.Mvc/8.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Asp.Versioning.Http": "8.1.0"
-        },
-        "compile": {
-          "lib/net8.0/Asp.Versioning.Mvc.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Asp.Versioning.Mvc.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Asp.Versioning.Mvc.ApiExplorer/8.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Asp.Versioning.Mvc": "8.1.0"
-        },
-        "compile": {
-          "lib/net8.0/Asp.Versioning.Mvc.ApiExplorer.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Asp.Versioning.Mvc.ApiExplorer.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "AspNetCore.HealthChecks.NpgSql/8.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Npgsql": "8.0.3"
-        },
-        "compile": {
-          "lib/net8.0/HealthChecks.NpgSql.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/HealthChecks.NpgSql.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "AspNetCore.HealthChecks.Redis/8.0.1": {
-        "type": "package",
-        "dependencies": {
-          "StackExchange.Redis": "2.7.4"
-        },
-        "compile": {
-          "lib/net6.0/HealthChecks.Redis.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/HealthChecks.Redis.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "AspNetCore.HealthChecks.UI/8.0.2": {
-        "type": "package",
-        "dependencies": {
-          "AspNetCore.HealthChecks.UI.Data": "8.0.1",
-          "KubernetesClient": "14.0.2",
-          "Microsoft.EntityFrameworkCore.Design": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/HealthChecks.UI.dll": {
-            "related": ".runtimeconfig.json;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/HealthChecks.UI.dll": {
-            "related": ".runtimeconfig.json;.xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "AspNetCore.HealthChecks.UI.Client/8.0.1": {
-        "type": "package",
-        "dependencies": {
-          "AspNetCore.HealthChecks.UI.Core": "8.0.1"
-        },
-        "compile": {
-          "lib/net8.0/HealthChecks.UI.Client.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/HealthChecks.UI.Client.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "AspNetCore.HealthChecks.UI.Core/8.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/HealthChecks.UI.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/HealthChecks.UI.Core.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "AspNetCore.HealthChecks.UI.Data/8.0.1": {
-        "type": "package",
-        "dependencies": {
-          "AspNetCore.HealthChecks.UI.Core": "8.0.1",
-          "Microsoft.EntityFrameworkCore": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/HealthChecks.UI.Data.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/HealthChecks.UI.Data.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "AspNetCore.HealthChecks.UI.PostgreSQL.Storage/8.0.1": {
-        "type": "package",
-        "dependencies": {
-          "AspNetCore.HealthChecks.UI.Data": "8.0.1",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/HealthChecks.UI.PostgreSQL.Storage.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/HealthChecks.UI.PostgreSQL.Storage.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "AspNetCore.HealthChecks.Uris/8.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/HealthChecks.Uris.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/HealthChecks.Uris.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "AutoMapper/16.2.0": {
         "type": "package",
         "dependencies": {
@@ -214,168 +18,16 @@
           }
         }
       },
-      "Azure.Core/1.53.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "10.0.3",
-          "Microsoft.Identity.Client": "4.83.1",
-          "Microsoft.Identity.Client.Extensions.Msal": "4.83.1",
-          "System.ClientModel": "1.10.0",
-          "System.Memory.Data": "10.0.3"
-        },
-        "compile": {
-          "lib/net10.0/Azure.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Azure.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net10.0/Azure.Core.targets": {}
-        }
-      },
-      "Azure.Identity/1.21.0": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Core": "1.53.0"
-        },
-        "compile": {
-          "lib/net10.0/Azure.Identity.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Azure.Identity.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Azure.Security.KeyVault.Certificates/4.6.0": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Core": "1.37.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Azure.Security.KeyVault.Secrets/4.6.0": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Core": "1.37.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Azure.Security.KeyVault.Secrets.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Azure.Security.KeyVault.Secrets.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Fractions/7.3.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/Fractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Fractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Google.Apis/1.54.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis.Core": "1.54.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Google.Apis.Auth/1.54.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis": "1.54.0",
-          "Google.Apis.Core": "1.54.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Google.Apis.Core/1.54.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Humanizer.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "KubernetesClient/17.0.14": {
-        "type": "package",
-        "dependencies": {
-          "Fractions": "7.3.0",
-          "YamlDotNet": "16.3.0"
-        },
-        "compile": {
-          "lib/net9.0/KubernetesClient.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/KubernetesClient.dll": {
-            "related": ".pdb;.xml"
           }
         }
       },
@@ -398,46 +50,23 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect/10.0.0": {
+      "Microsoft.AspNetCore.Authorization/10.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
-        },
         "compile": {
-          "lib/net10.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+          "lib/net10.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+          "lib/net10.0/_._": {
             "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Microsoft.Azure.Security.KeyGuardAttestation/1.1.5": {
-        "type": "package",
-        "runtimeTargets": {
-          "runtimes/win-x64/native/AttestationClientLib.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/AttestationClientLib.lib": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/AttestationClientLib.pdb": {
-            "assetType": "native",
-            "rid": "win-x64"
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/10.0.3": {
+      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+          "lib/netstandard2.1/_._": {
             "related": ".xml"
           }
         },
@@ -445,22 +74,6 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Microsoft.Bcl.Cryptography/10.0.2": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.Bcl.Cryptography.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Bcl.Cryptography.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/3.3.3": {
@@ -475,7 +88,7 @@
           "Microsoft.CodeAnalysis.Analyzers": "3.3.3"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -532,7 +145,7 @@
           "Microsoft.CodeAnalysis.Common": "[4.5.0]"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -592,7 +205,7 @@
           "Microsoft.CodeAnalysis.Workspaces.Common": "[4.5.0]"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -652,7 +265,7 @@
           "System.Composition": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".pdb;.xml"
           }
         },
@@ -823,499 +436,96 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/8.0.0": {
+      "Microsoft.IdentityModel.Abstractions/8.14.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/8.14.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.0"
+          "Microsoft.IdentityModel.Tokens": "8.14.0"
         },
         "compile": {
-          "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Graph/6.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Graph.Core": "4.0.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Graph.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Graph.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Graph.Core/4.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.18.0",
-          "Microsoft.IdentityModel.Validators": "8.18.0",
-          "Microsoft.Kiota.Abstractions": "2.0.0",
-          "Microsoft.Kiota.Authentication.Azure": "2.0.0",
-          "Microsoft.Kiota.Http.HttpClientLibrary": "2.0.0",
-          "Microsoft.Kiota.Serialization.Form": "2.0.0",
-          "Microsoft.Kiota.Serialization.Json": "2.0.0",
-          "Microsoft.Kiota.Serialization.Multipart": "2.0.0",
-          "Microsoft.Kiota.Serialization.Text": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Graph.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Graph.Core.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Abstractions/12.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.Identity.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Identity.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Client/4.85.1": {
+      "Microsoft.IdentityModel.Logging/8.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Abstractions": "8.14.0"
         },
         "compile": {
-          "lib/net8.0/Microsoft.Identity.Client.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Logging.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Identity.Client.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Logging.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Identity.Client.Extensions.Msal/4.83.1": {
+      "Microsoft.IdentityModel.Protocols/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Identity.Client": "4.83.1",
-          "System.Security.Cryptography.ProtectedData": "4.5.0"
+          "Microsoft.IdentityModel.Tokens": "8.0.1"
         },
         "compile": {
-          "lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Protocols.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Protocols.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Identity.Client.KeyAttestation/4.85.1": {
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Security.KeyGuardAttestation": "1.1.5",
-          "Microsoft.Identity.Client": "4.85.1"
+          "Microsoft.IdentityModel.Protocols": "8.0.1",
+          "System.IdentityModel.Tokens.Jwt": "8.0.1"
         },
         "compile": {
-          "lib/net8.0/Microsoft.Identity.Client.KeyAttestation.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Identity.Client.KeyAttestation.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Identity.Web/4.11.0": {
+      "Microsoft.IdentityModel.Tokens/8.14.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Identity.Web.Certificate": "4.11.0",
-          "Microsoft.Identity.Web.Certificateless": "4.11.0",
-          "Microsoft.Identity.Web.TokenAcquisition": "4.11.0",
-          "Microsoft.Identity.Web.TokenCache": "4.11.0",
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.19.1",
-          "Microsoft.IdentityModel.Validators": "8.19.1",
-          "System.IdentityModel.Tokens.Jwt": "8.19.1"
+          "Microsoft.IdentityModel.Logging": "8.14.0"
         },
         "compile": {
-          "lib/net10.0/Microsoft.Identity.Web.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Tokens.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/Microsoft.Identity.Web.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Web.Certificate/4.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Identity": "1.17.2",
-          "Azure.Security.KeyVault.Certificates": "4.6.0",
-          "Azure.Security.KeyVault.Secrets": "4.6.0",
-          "Microsoft.Identity.Abstractions": "12.2.0",
-          "Microsoft.Identity.Web.Certificateless": "4.11.0",
-          "Microsoft.Identity.Web.Diagnostics": "4.11.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Identity.Web.Certificate.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Identity.Web.Certificate.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Web.Certificateless/4.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Identity.Client": "4.85.1",
-          "Microsoft.Identity.Client.KeyAttestation": "4.85.1",
-          "Microsoft.IdentityModel.JsonWebTokens": "8.19.1",
-          "Microsoft.IdentityModel.LoggingExtensions": "8.19.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Identity.Web.Certificateless.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Identity.Web.Certificateless.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Web.Diagnostics/4.11.0": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.Identity.Web.Diagnostics.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Identity.Web.Diagnostics.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Web.TokenAcquisition/4.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.0",
-          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.0",
-          "Microsoft.Identity.Abstractions": "12.2.0",
-          "Microsoft.Identity.Web.Certificate": "4.11.0",
-          "Microsoft.Identity.Web.Certificateless": "4.11.0",
-          "Microsoft.Identity.Web.TokenCache": "4.11.0",
-          "Microsoft.IdentityModel.Logging": "8.19.1",
-          "Microsoft.IdentityModel.LoggingExtensions": "8.19.1",
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.19.1",
-          "System.IdentityModel.Tokens.Jwt": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Identity.Web.TokenAcquisition.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Identity.Web.TokenAcquisition.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Identity.Web.TokenCache/4.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Identity.Client": "4.85.1",
-          "Microsoft.Identity.Web.Diagnostics": "4.11.0",
-          "System.Security.Cryptography.Pkcs": "10.0.7"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Identity.Web.TokenCache.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Identity.Web.TokenCache.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Abstractions/8.19.1": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.JsonWebTokens/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Logging/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.Logging.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.Logging.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.LoggingExtensions/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.LoggingExtensions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.LoggingExtensions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Protocols/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.Protocols.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.Protocols.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols": "8.19.1",
-          "System.IdentityModel.Tokens.Jwt": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Tokens/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.Cryptography": "10.0.2",
-          "Microsoft.IdentityModel.Logging": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Validators/8.19.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols": "8.19.1",
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.19.1",
-          "Microsoft.IdentityModel.Tokens": "8.19.1",
-          "System.IdentityModel.Tokens.Jwt": "8.19.1"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.IdentityModel.Validators.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.IdentityModel.Validators.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.IO.RecyclableMemoryStream/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Abstractions/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Std.UriTemplate": "2.0.8"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Authentication.Azure/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Core": "1.50.0",
-          "Microsoft.Kiota.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Authentication.Azure.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Authentication.Azure.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Http.HttpClientLibrary/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Kiota.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Http.HttpClientLibrary.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Http.HttpClientLibrary.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Form/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
-          "Microsoft.Kiota.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Form.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Form.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Json/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
-          "Microsoft.Kiota.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Multipart/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
-          "Microsoft.Kiota.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Multipart.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Multipart.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Text/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
-          "Microsoft.Kiota.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Text.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Kiota.Serialization.Text.dll": {
+          "lib/net9.0/Microsoft.IdentityModel.Tokens.dll": {
             "related": ".xml"
           }
         }
@@ -1333,103 +543,19 @@
           }
         }
       },
-      "MiniProfiler.AspNetCore/4.2.22": {
-        "type": "package",
-        "dependencies": {
-          "MiniProfiler.Shared": "4.2.22"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/MiniProfiler.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/MiniProfiler.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "MiniProfiler.AspNetCore.Mvc/4.2.22": {
-        "type": "package",
-        "dependencies": {
-          "MiniProfiler.AspNetCore": "4.2.22"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/MiniProfiler.AspNetCore.Mvc.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/MiniProfiler.AspNetCore.Mvc.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "MiniProfiler.EntityFrameworkCore/4.2.22": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "MiniProfiler.Shared": "4.2.22"
-        },
-        "compile": {
-          "lib/netstandard2.0/MiniProfiler.EntityFrameworkCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/MiniProfiler.EntityFrameworkCore.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "MiniProfiler.Shared/4.2.22": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "10.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/MiniProfiler.Shared.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/MiniProfiler.Shared.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Mono.TextTemplating/2.2.1": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "4.4.0"
         },
         "compile": {
-          "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Npgsql/8.0.3": {
+      "Npgsql/8.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/Npgsql.dll": {
@@ -1457,54 +583,6 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NWebsec.AspNetCore.Core/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/NWebsec.AspNetCore.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/NWebsec.AspNetCore.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "NWebsec.AspNetCore.Middleware/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "NWebsec.AspNetCore.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/NWebsec.AspNetCore.Middleware.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/NWebsec.AspNetCore.Middleware.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Pipelines.Sockets.Unofficial/2.2.8": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
             "related": ".xml"
           }
         }
@@ -1645,91 +723,20 @@
           }
         }
       },
-      "Serilog.Sinks.File/5.0.0": {
+      "Serilog.Sinks.File/4.1.0": {
         "type": "package",
         "dependencies": {
-          "Serilog": "2.10.0"
+          "Serilog": "2.5.0"
         },
         "compile": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
+          "lib/netstandard2.0/Serilog.Sinks.File.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
+          "lib/netstandard2.0/Serilog.Sinks.File.dll": {
             "related": ".pdb;.xml"
           }
-        }
-      },
-      "Serilog.Sinks.PeriodicBatching/2.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Serilog": "2.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Serilog.Sinks.PeriodicBatching.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Serilog.Sinks.PeriodicBatching.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Sinks.PostgreSQL/2.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Npgsql": "5.0.5",
-          "Serilog": "2.7.1",
-          "Serilog.Sinks.PeriodicBatching": "2.3.0"
-        },
-        "compile": {
-          "lib/net5.0/Serilog.Sinks.PostgreSQL.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Serilog.Sinks.PostgreSQL.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Sinks.PostgreSQL.Configuration/1.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Serilog.Sinks.PostgreSQL": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll": {}
-        }
-      },
-      "StackExchange.Redis/2.7.4": {
-        "type": "package",
-        "dependencies": {
-          "Pipelines.Sockets.Unofficial": "2.2.8"
-        },
-        "compile": {
-          "lib/net6.0/StackExchange.Redis.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/StackExchange.Redis.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Std.UriTemplate/2.0.8": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Std.UriTemplate.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Std.UriTemplate.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/6.3.0": {
@@ -1742,22 +749,6 @@
         },
         "build": {
           "build/Swashbuckle.AspNetCore.props": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.Annotations/6.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.3.0"
-        },
-        "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Annotations.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Annotations.dll": {
-            "related": ".pdb;.xml"
-          }
         }
       },
       "Swashbuckle.AspNetCore.Swagger/6.3.0": {
@@ -1811,29 +802,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "System.ClientModel/1.10.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Memory.Data": "10.0.3"
-        },
-        "compile": {
-          "lib/net10.0/System.ClientModel.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/System.ClientModel.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net10.0/System.ClientModel.targets": {}
-        }
-      },
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.CodeDom.dll": {
+          "ref/netstandard2.0/_._": {
             "related": ".xml"
           }
         },
@@ -1857,7 +829,7 @@
       "System.Composition.AttributedModel/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Composition.AttributedModel.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1876,7 +848,7 @@
           "System.Composition.AttributedModel": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Composition.Convention.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1895,7 +867,7 @@
           "System.Composition.Runtime": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Composition.Hosting.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1911,7 +883,7 @@
       "System.Composition.Runtime/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Composition.Runtime.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1932,7 +904,7 @@
           "System.Composition.Runtime": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Composition.TypedParts.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -1945,87 +917,19 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.IdentityModel.Tokens.Jwt/8.19.1": {
+      "System.IdentityModel.Tokens.Jwt/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "8.19.1",
-          "Microsoft.IdentityModel.Tokens": "8.19.1"
+          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1",
+          "Microsoft.IdentityModel.Tokens": "8.0.1"
         },
         "compile": {
-          "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
+          "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "System.Memory.Data/10.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/System.Memory.Data.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/System.Memory.Data.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
-        }
-      },
-      "System.Security.Cryptography.Pkcs/10.0.7": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Cryptography.ProtectedData/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "YamlDotNet/16.3.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/YamlDotNet.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/YamlDotNet.dll": {
+          "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
         }
@@ -2033,200 +937,6 @@
     }
   },
   "libraries": {
-    "Asp.Versioning.Abstractions/8.1.0": {
-      "sha512": "mpeNZyMdvrHztJwR1sXIUQ+3iioEU97YMBnFA9WLbsPOYhGwDJnqJMmEd8ny7kcmS9OjTHoEuX/bSXXY3brIFA==",
-      "type": "package",
-      "path": "asp.versioning.abstractions/8.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "asp.versioning.abstractions.8.1.0.nupkg.sha512",
-        "asp.versioning.abstractions.nuspec",
-        "icon.png",
-        "lib/net8.0/Asp.Versioning.Abstractions.dll",
-        "lib/net8.0/Asp.Versioning.Abstractions.xml",
-        "lib/netstandard1.0/Asp.Versioning.Abstractions.dll",
-        "lib/netstandard1.0/Asp.Versioning.Abstractions.xml",
-        "lib/netstandard2.0/Asp.Versioning.Abstractions.dll",
-        "lib/netstandard2.0/Asp.Versioning.Abstractions.xml"
-      ]
-    },
-    "Asp.Versioning.Http/8.1.0": {
-      "sha512": "Xu4xF62Cu9JqYi/CTa2TiK5kyHoa4EluPynj/bPFWDmlTIPzuJQbBI5RgFYVRFHjFVvWMoA77acRaFu7i7Wzqg==",
-      "type": "package",
-      "path": "asp.versioning.http/8.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "asp.versioning.http.8.1.0.nupkg.sha512",
-        "asp.versioning.http.nuspec",
-        "icon.png",
-        "lib/net8.0/Asp.Versioning.Http.dll",
-        "lib/net8.0/Asp.Versioning.Http.xml"
-      ]
-    },
-    "Asp.Versioning.Mvc/8.1.0": {
-      "sha512": "BMAJM2sGsTUw5FQ9upKQt6GFoldWksePgGpYjl56WSRvIuE3UxKZh0gAL+wDTIfLshUZm97VCVxlOGyrcjWz9Q==",
-      "type": "package",
-      "path": "asp.versioning.mvc/8.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "asp.versioning.mvc.8.1.0.nupkg.sha512",
-        "asp.versioning.mvc.nuspec",
-        "icon.png",
-        "lib/net8.0/Asp.Versioning.Mvc.dll",
-        "lib/net8.0/Asp.Versioning.Mvc.xml"
-      ]
-    },
-    "Asp.Versioning.Mvc.ApiExplorer/8.1.0": {
-      "sha512": "a90gW/4TF/14Bjiwg9LqNtdKGC4G3gu02+uynq3bCISfQm48km5chny4Yg5J4hixQPJUwwJJ9Do1G+jM8L9h3g==",
-      "type": "package",
-      "path": "asp.versioning.mvc.apiexplorer/8.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "asp.versioning.mvc.apiexplorer.8.1.0.nupkg.sha512",
-        "asp.versioning.mvc.apiexplorer.nuspec",
-        "icon.png",
-        "lib/net8.0/Asp.Versioning.Mvc.ApiExplorer.dll",
-        "lib/net8.0/Asp.Versioning.Mvc.ApiExplorer.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.NpgSql/8.0.2": {
-      "sha512": "1R0JGr80PkUd0I2HWaunAFcaMPJDhD1qMLYWEIVBkFRdSXrw7KkI5ooJ1hePqk0p/a2IWaqW3+CuxN3qv+yhQA==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.npgsql/8.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "aspnetcore.healthchecks.npgsql.8.0.2.nupkg.sha512",
-        "aspnetcore.healthchecks.npgsql.nuspec",
-        "icon.png",
-        "lib/net7.0/HealthChecks.NpgSql.dll",
-        "lib/net7.0/HealthChecks.NpgSql.xml",
-        "lib/net8.0/HealthChecks.NpgSql.dll",
-        "lib/net8.0/HealthChecks.NpgSql.xml",
-        "lib/netstandard2.0/HealthChecks.NpgSql.dll",
-        "lib/netstandard2.0/HealthChecks.NpgSql.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.Redis/8.0.1": {
-      "sha512": "45jqq4ydvmm7yKpTf0jEpUuYloe2vlytN9dasmqwmQyorpNbjdvWuyvSmjVZM5nBa5e5ryF5MU+F7bXv6Zp2vQ==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.redis/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.redis.8.0.1.nupkg.sha512",
-        "aspnetcore.healthchecks.redis.nuspec",
-        "icon.png",
-        "lib/net6.0/HealthChecks.Redis.dll",
-        "lib/net6.0/HealthChecks.Redis.xml",
-        "lib/netstandard2.0/HealthChecks.Redis.dll",
-        "lib/netstandard2.0/HealthChecks.Redis.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.UI/8.0.2": {
-      "sha512": "AkqR7F8jropKO9FQmsjorM7eB00Y6I9P6jObNqVK0M+dNlEvBGjaJyYP2UM16azOxEuikJeUaCP9+XdrgPSyFg==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.ui/8.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.ui.8.0.2.nupkg.sha512",
-        "aspnetcore.healthchecks.ui.nuspec",
-        "icon.png",
-        "lib/net8.0/HealthChecks.UI.dll",
-        "lib/net8.0/HealthChecks.UI.runtimeconfig.json",
-        "lib/net8.0/HealthChecks.UI.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.UI.Client/8.0.1": {
-      "sha512": "nhC6KIoB/EtTbH3uGm2J6EHEUyTJuETUARFePbmrnA+zjbwsirzIVUQl46qIjvyPABhK0e7Rk+AxcRqC6zikqA==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.ui.client/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.ui.client.8.0.1.nupkg.sha512",
-        "aspnetcore.healthchecks.ui.client.nuspec",
-        "icon.png",
-        "lib/net6.0/HealthChecks.UI.Client.dll",
-        "lib/net6.0/HealthChecks.UI.Client.xml",
-        "lib/net7.0/HealthChecks.UI.Client.dll",
-        "lib/net7.0/HealthChecks.UI.Client.xml",
-        "lib/net8.0/HealthChecks.UI.Client.dll",
-        "lib/net8.0/HealthChecks.UI.Client.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.UI.Core/8.0.1": {
-      "sha512": "Vn00MOJ1I0HSqyP7Bt9v0pr0AIgbrXMjL/KFwW+sRwLRogOtep8BWGimd8XYRCbCDLrAi7VSArU02f6pEIw69w==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.ui.core/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.ui.core.8.0.1.nupkg.sha512",
-        "aspnetcore.healthchecks.ui.core.nuspec",
-        "icon.png",
-        "lib/net6.0/HealthChecks.UI.Core.dll",
-        "lib/net6.0/HealthChecks.UI.Core.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.UI.Data/8.0.1": {
-      "sha512": "zST5YYRtE8nTIdlXDC0Sq6bBDrA07ewZRBHr9ZQ+448+cQPJwksXA7M0bZRg4VnE7mGSqkFhifGyGh46XYFvOQ==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.ui.data/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.ui.data.8.0.1.nupkg.sha512",
-        "aspnetcore.healthchecks.ui.data.nuspec",
-        "icon.png",
-        "lib/net8.0/HealthChecks.UI.Data.dll",
-        "lib/net8.0/HealthChecks.UI.Data.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.UI.PostgreSQL.Storage/8.0.1": {
-      "sha512": "E5yrkBqwCZAVhGaB+vodhA5L8LqvSw6ZpXuXL4x6/JuQhJQ0ZKEf0/BzAZfo5BfRCJvjflD4ZvtpQXPWNdnf8g==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.ui.postgresql.storage/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.ui.postgresql.storage.8.0.1.nupkg.sha512",
-        "aspnetcore.healthchecks.ui.postgresql.storage.nuspec",
-        "icon.png",
-        "lib/net8.0/HealthChecks.UI.PostgreSQL.Storage.dll",
-        "lib/net8.0/HealthChecks.UI.PostgreSQL.Storage.xml"
-      ]
-    },
-    "AspNetCore.HealthChecks.Uris/8.0.1": {
-      "sha512": "A1ahRx4pdXjrSGlGFLoyoXOV4Lfp5sfs+OIGfvi14RwecIAac4xs6cP0Q8tw/rv4Ng+KAaYpzD4qhxXVwUcIyA==",
-      "type": "package",
-      "path": "aspnetcore.healthchecks.uris/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aspnetcore.healthchecks.uris.8.0.1.nupkg.sha512",
-        "aspnetcore.healthchecks.uris.nuspec",
-        "icon.png",
-        "lib/net5.0/HealthChecks.Uris.dll",
-        "lib/net5.0/HealthChecks.Uris.xml",
-        "lib/netstandard2.0/HealthChecks.Uris.dll",
-        "lib/netstandard2.0/HealthChecks.Uris.xml"
-      ]
-    },
     "AutoMapper/16.2.0": {
       "sha512": "PE8HgPc5BZJnAFwjvDTE72gWL6YrYib+V7+vxtLXDYz0CH/fFgbVcwLUC9UHk5ALwspZ6Vbmoo6PHvseIk/0ZA==",
       "type": "package",
@@ -2251,180 +961,6 @@
         "lib/netstandard2.0/AutoMapper.xml"
       ]
     },
-    "Azure.Core/1.53.0": {
-      "sha512": "x9c/toFMOtRrlTdFuE7rlGCVAduQzWVfKmLz5juj41zJAXEhYD5hluiUyyAEzJ6OxpBnKtiaBztzwpZITAVjtg==",
-      "type": "package",
-      "path": "azure.core/1.53.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGELOG.md",
-        "ConfigurationSchema.json",
-        "README.md",
-        "azure.core.1.53.0.nupkg.sha512",
-        "azure.core.nuspec",
-        "azureicon.png",
-        "buildTransitive/net10.0/Azure.Core.targets",
-        "buildTransitive/net462/Azure.Core.targets",
-        "buildTransitive/net472/Azure.Core.targets",
-        "buildTransitive/net8.0/Azure.Core.targets",
-        "buildTransitive/netstandard2.0/Azure.Core.targets",
-        "lib/net10.0/Azure.Core.dll",
-        "lib/net10.0/Azure.Core.xml",
-        "lib/net462/Azure.Core.dll",
-        "lib/net462/Azure.Core.xml",
-        "lib/net472/Azure.Core.dll",
-        "lib/net472/Azure.Core.xml",
-        "lib/net8.0/Azure.Core.dll",
-        "lib/net8.0/Azure.Core.xml",
-        "lib/netstandard2.0/Azure.Core.dll",
-        "lib/netstandard2.0/Azure.Core.xml"
-      ]
-    },
-    "Azure.Identity/1.21.0": {
-      "sha512": "GeFv8sGwRKvDKwI2WFy8r0mhmlxEVZg24Sit2NogTjiSO8RVjllWM65OT6e1sKjOvG8V74y7hAbaELUUPjZQSw==",
-      "type": "package",
-      "path": "azure.identity/1.21.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGELOG.md",
-        "README.md",
-        "azure.identity.1.21.0.nupkg.sha512",
-        "azure.identity.nuspec",
-        "azureicon.png",
-        "lib/net10.0/Azure.Identity.dll",
-        "lib/net10.0/Azure.Identity.xml",
-        "lib/net8.0/Azure.Identity.dll",
-        "lib/net8.0/Azure.Identity.xml",
-        "lib/netstandard2.0/Azure.Identity.dll",
-        "lib/netstandard2.0/Azure.Identity.xml"
-      ]
-    },
-    "Azure.Security.KeyVault.Certificates/4.6.0": {
-      "sha512": "e2ATU/n2ZDL/S8A8EdrcfKEvKc2BojCrrSpmM+JKnrSTQS32x/W0Ldu8utk+epLKwXvSJRSWtlgdo7X8hG1mCg==",
-      "type": "package",
-      "path": "azure.security.keyvault.certificates/4.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGELOG.md",
-        "README.md",
-        "azure.security.keyvault.certificates.4.6.0.nupkg.sha512",
-        "azure.security.keyvault.certificates.nuspec",
-        "azureicon.png",
-        "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.dll",
-        "lib/netstandard2.0/Azure.Security.KeyVault.Certificates.xml"
-      ]
-    },
-    "Azure.Security.KeyVault.Secrets/4.6.0": {
-      "sha512": "vwPceoznuT6glvirZcXlaCQrh1uzTSxpZUi2hRFNumHiS3hVyqIXI5fgWiLtlBzwqPJMTr0flUoSvGKjXXQlfg==",
-      "type": "package",
-      "path": "azure.security.keyvault.secrets/4.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGELOG.md",
-        "README.md",
-        "azure.security.keyvault.secrets.4.6.0.nupkg.sha512",
-        "azure.security.keyvault.secrets.nuspec",
-        "azureicon.png",
-        "lib/netstandard2.0/Azure.Security.KeyVault.Secrets.dll",
-        "lib/netstandard2.0/Azure.Security.KeyVault.Secrets.xml"
-      ]
-    },
-    "Fractions/7.3.0": {
-      "sha512": "2bETFWLBc8b7Ut2SVi+bxhGVwiSpknHYGBh2PADyGWONLkTxT7bKyDRhF8ao+XUv90tq8Fl7GTPxSI5bacIRJw==",
-      "type": "package",
-      "path": "fractions/7.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Fraction.png",
-        "Readme.md",
-        "fractions.7.3.0.nupkg.sha512",
-        "fractions.nuspec",
-        "lib/netstandard2.0/Fractions.dll",
-        "lib/netstandard2.0/Fractions.xml",
-        "lib/netstandard2.1/Fractions.dll",
-        "lib/netstandard2.1/Fractions.xml",
-        "license.txt"
-      ]
-    },
-    "Google.Apis/1.54.0": {
-      "sha512": "53PujXOst4JNibnySRlOzduBwr3wt4hiLPbVCpZs/P2G8waltIW3cmma6sG7lTaW9ag/3T6MtIgt/uFtWBBkwA==",
-      "type": "package",
-      "path": "google.apis/1.54.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.1.54.0.nupkg.sha512",
-        "google.apis.nuspec",
-        "lib/net45/Google.Apis.PlatformServices.dll",
-        "lib/net45/Google.Apis.dll",
-        "lib/net45/Google.Apis.pdb",
-        "lib/net45/Google.Apis.xml",
-        "lib/netstandard1.3/Google.Apis.dll",
-        "lib/netstandard1.3/Google.Apis.pdb",
-        "lib/netstandard1.3/Google.Apis.xml",
-        "lib/netstandard2.0/Google.Apis.dll",
-        "lib/netstandard2.0/Google.Apis.pdb",
-        "lib/netstandard2.0/Google.Apis.xml"
-      ]
-    },
-    "Google.Apis.Auth/1.54.0": {
-      "sha512": "gVWia+KE7MLBTiAaDG//TociR6lE0/reEXx+go065L/w20skB2Ib58vnp4iGPaLehwY8ib8XmXy3P1n/Fr5Y4A==",
-      "type": "package",
-      "path": "google.apis.auth/1.54.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.auth.1.54.0.nupkg.sha512",
-        "google.apis.auth.nuspec",
-        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
-        "lib/net45/Google.Apis.Auth.dll",
-        "lib/net45/Google.Apis.Auth.pdb",
-        "lib/net45/Google.Apis.Auth.xml",
-        "lib/net461/Google.Apis.Auth.PlatformServices.dll",
-        "lib/net461/Google.Apis.Auth.dll",
-        "lib/net461/Google.Apis.Auth.pdb",
-        "lib/net461/Google.Apis.Auth.xml",
-        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
-        "lib/netstandard1.3/Google.Apis.Auth.dll",
-        "lib/netstandard1.3/Google.Apis.Auth.pdb",
-        "lib/netstandard1.3/Google.Apis.Auth.xml",
-        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "lib/netstandard2.0/Google.Apis.Auth.dll",
-        "lib/netstandard2.0/Google.Apis.Auth.pdb",
-        "lib/netstandard2.0/Google.Apis.Auth.xml"
-      ]
-    },
-    "Google.Apis.Core/1.54.0": {
-      "sha512": "NKeTTKCttOQrLUCyLyRo5m53b2mG8ymJaiL+i1fR6w8TrrHD31ixPGO+BlwQs9OLuLd/p8BKkSdSaNGjKw5rkA==",
-      "type": "package",
-      "path": "google.apis.core/1.54.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.core.1.54.0.nupkg.sha512",
-        "google.apis.core.nuspec",
-        "lib/net45/Google.Apis.Core.dll",
-        "lib/net45/Google.Apis.Core.pdb",
-        "lib/net45/Google.Apis.Core.xml",
-        "lib/netstandard1.3/Google.Apis.Core.dll",
-        "lib/netstandard1.3/Google.Apis.Core.pdb",
-        "lib/netstandard1.3/Google.Apis.Core.xml",
-        "lib/netstandard2.0/Google.Apis.Core.dll",
-        "lib/netstandard2.0/Google.Apis.Core.pdb",
-        "lib/netstandard2.0/Google.Apis.Core.xml"
-      ]
-    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -2440,24 +976,6 @@
         "lib/netstandard1.0/Humanizer.xml",
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
-        "logo.png"
-      ]
-    },
-    "KubernetesClient/17.0.14": {
-      "sha512": "FMGWjGtN8WEUKAAQxs96PK2tYvPrvwhoJzay/6HiByVTvHoJ0i9u7ykvYb7E3vLTSlfv26Q2Ktxr41zYCppu8A==",
-      "type": "package",
-      "path": "kubernetesclient/17.0.14",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "kubernetesclient.17.0.14.nupkg.sha512",
-        "kubernetesclient.nuspec",
-        "lib/net8.0/KubernetesClient.dll",
-        "lib/net8.0/KubernetesClient.pdb",
-        "lib/net8.0/KubernetesClient.xml",
-        "lib/net9.0/KubernetesClient.dll",
-        "lib/net9.0/KubernetesClient.pdb",
-        "lib/net9.0/KubernetesClient.xml",
         "logo.png"
       ]
     },
@@ -2477,94 +995,43 @@
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.OpenIdConnect/10.0.0": {
-      "sha512": "6ATONu+5A2oh/vzmoFhf3cuQcclMaWGHrb1kvjVsYtml+gzuWD48MmbsItM4xAUQkJZ2t8XFmbGp8pZLPxKneA==",
+    "Microsoft.AspNetCore.Authorization/10.0.0": {
+      "sha512": "8qUwBAtUj9kX8RwqEPGJu3zGM/GlwF2bR9gsxk/+kiSmCB6aDYlYF7E2gM9VOYS9NDF6zxTSEgJxwD9kFbu8Sw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.openidconnect/10.0.0",
+      "path": "microsoft.aspnetcore.authorization/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net10.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll",
-        "lib/net10.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.xml",
-        "microsoft.aspnetcore.authentication.openidconnect.10.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.authentication.openidconnect.nuspec"
+        "lib/net10.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Authorization.xml",
+        "lib/net462/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net462/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.10.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.Azure.Security.KeyGuardAttestation/1.1.5": {
-      "sha512": "y7WEZy7swyQCQISyVfUDNo8a1sqHiWzaoWoQAkdXxqg3hLNjQI+LEsRQol3idJ665E++doJbiQG6NIiUb5cw0g==",
+    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+      "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
       "type": "package",
-      "path": "microsoft.azure.security.keyguardattestation/1.1.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/native/Microsoft.Azure.Security.KeyGuardAttestation.props",
-        "build/native/Microsoft.Azure.Security.KeyGuardAttestation.targets",
-        "build/native/include/AttestationApi.h",
-        "build/native/include/AttestationLogInfo.h",
-        "build/native/lib/x64/AttestationClientLib.dll",
-        "build/native/lib/x64/AttestationClientLib.lib",
-        "build/native/lib/x64/AttestationClientLib.pdb",
-        "microsoft.azure.security.keyguardattestation.1.1.5.nupkg.sha512",
-        "microsoft.azure.security.keyguardattestation.nuspec",
-        "runtimes/win-x64/native/AttestationClientLib.dll",
-        "runtimes/win-x64/native/AttestationClientLib.lib",
-        "runtimes/win-x64/native/AttestationClientLib.pdb"
-      ]
-    },
-    "Microsoft.Bcl.AsyncInterfaces/10.0.3": {
-      "sha512": "TV62UsrJZPX6gbt3c4WrtXh7bmaDIcMqf9uft1cc4L6gJXOU07hDGEh+bFQh/L2Az0R1WVOkiT66lFqS6G2NmA==",
-      "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/10.0.3",
+      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "PACKAGE.md",
+        "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets",
-        "buildTransitive/net462/_._",
-        "lib/net462/Microsoft.Bcl.AsyncInterfaces.dll",
-        "lib/net462/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.10.0.3.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Bcl.Cryptography/10.0.2": {
-      "sha512": "LG9Yll3B5aNpxv0+D47g6LiOiKBIlodhcHdQwcYzo8VeexFLGqx5ymetmA2aBRyo9cCcWsQWrFsdbsr8LvmWDw==",
-      "type": "package",
-      "path": "microsoft.bcl.cryptography/10.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Bcl.Cryptography.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Bcl.Cryptography.targets",
-        "lib/net10.0/Microsoft.Bcl.Cryptography.dll",
-        "lib/net10.0/Microsoft.Bcl.Cryptography.xml",
-        "lib/net462/Microsoft.Bcl.Cryptography.dll",
-        "lib/net462/Microsoft.Bcl.Cryptography.xml",
-        "lib/net8.0/Microsoft.Bcl.Cryptography.dll",
-        "lib/net8.0/Microsoft.Bcl.Cryptography.xml",
-        "lib/net9.0/Microsoft.Bcl.Cryptography.dll",
-        "lib/net9.0/Microsoft.Bcl.Cryptography.xml",
-        "lib/netstandard2.0/Microsoft.Bcl.Cryptography.dll",
-        "lib/netstandard2.0/Microsoft.Bcl.Cryptography.xml",
-        "lib/netstandard2.1/Microsoft.Bcl.Cryptography.dll",
-        "lib/netstandard2.1/Microsoft.Bcl.Cryptography.xml",
-        "microsoft.bcl.cryptography.10.0.2.nupkg.sha512",
-        "microsoft.bcl.cryptography.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -3153,296 +1620,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/8.0.0": {
-      "sha512": "rtnltltUHm1nMEupZ9PNbs+b/8VXDZ/9Be8kxsaX3A00wqIQqNanfAG9xavu3CSCpkflF8M72py9oEdwbVaMZA==",
+    "Microsoft.IdentityModel.Abstractions/8.14.0": {
+      "sha512": "iwbCpSjD3ehfTwBhtSNEtKPK0ICun6ov7Ibx6ISNA9bfwIyzI2Siwyi9eJFCJBwxowK9xcA1mj+jBWiigeqgcQ==",
       "type": "package",
-      "path": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll",
-        "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.xml",
-        "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.8.0.0.nupkg.sha512",
-        "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.nuspec"
-      ]
-    },
-    "Microsoft.Graph/6.2.0": {
-      "sha512": "s7Flvk+r/f/x64I4D4FiYc8sPVcrSjXmCZblTeBFVqBr0RXJOGg5SDMbiHtCqxiGoYtEvLp/fs8FN1G1nopl0g==",
-      "type": "package",
-      "path": "microsoft.graph/6.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net10.0/Microsoft.Graph.dll",
-        "lib/net10.0/Microsoft.Graph.xml",
-        "lib/net8.0/Microsoft.Graph.dll",
-        "lib/net8.0/Microsoft.Graph.xml",
-        "lib/netstandard2.0/Microsoft.Graph.dll",
-        "lib/netstandard2.0/Microsoft.Graph.xml",
-        "lib/netstandard2.1/Microsoft.Graph.dll",
-        "lib/netstandard2.1/Microsoft.Graph.xml",
-        "microsoft.graph.6.2.0.nupkg.sha512",
-        "microsoft.graph.nuspec"
-      ]
-    },
-    "Microsoft.Graph.Core/4.0.1": {
-      "sha512": "hWfGglaCLUZsOs0VHA2vkwBCRy0WOEfH4Wh1Y7yb1Q5nSbiyiPJWtHOuEfuEa2jqU0tPKOQ7eN8HRTSOMMQNfw==",
-      "type": "package",
-      "path": "microsoft.graph.core/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net10.0/Microsoft.Graph.Core.dll",
-        "lib/net10.0/Microsoft.Graph.Core.xml",
-        "lib/net462/Microsoft.Graph.Core.dll",
-        "lib/net462/Microsoft.Graph.Core.xml",
-        "lib/net8.0/Microsoft.Graph.Core.dll",
-        "lib/net8.0/Microsoft.Graph.Core.xml",
-        "lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "lib/netstandard2.0/Microsoft.Graph.Core.xml",
-        "lib/netstandard2.1/Microsoft.Graph.Core.dll",
-        "lib/netstandard2.1/Microsoft.Graph.Core.xml",
-        "microsoft.graph.core.4.0.1.nupkg.sha512",
-        "microsoft.graph.core.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Abstractions/12.2.0": {
-      "sha512": "FBx4dsdQ2EHU++WINjMn7PNyhTJzPlEnrGYzo7ArE2yKnCeXPftFsB3W5z6PNK1BMMTxSHmK2Z3qruj5q1EuYg==",
-      "type": "package",
-      "path": "microsoft.identity.abstractions/12.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/net10.0/Microsoft.Identity.Abstractions.dll",
-        "lib/net10.0/Microsoft.Identity.Abstractions.xml",
-        "lib/net462/Microsoft.Identity.Abstractions.dll",
-        "lib/net462/Microsoft.Identity.Abstractions.xml",
-        "lib/net8.0/Microsoft.Identity.Abstractions.dll",
-        "lib/net8.0/Microsoft.Identity.Abstractions.xml",
-        "lib/net9.0/Microsoft.Identity.Abstractions.dll",
-        "lib/net9.0/Microsoft.Identity.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Identity.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Identity.Abstractions.xml",
-        "microsoft.identity.abstractions.12.2.0.nupkg.sha512",
-        "microsoft.identity.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Client/4.85.1": {
-      "sha512": "9QjTBf7ROf5u4LiR7jSSexOth5LbH1fNonwiuHeGJTi2xhpUj1m0hh7oFzKMXCYK4dobzKbKKf8CxDBsr9u6tw==",
-      "type": "package",
-      "path": "microsoft.identity.client/4.85.1",
+      "path": "microsoft.identitymodel.abstractions/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "lib/net462/Microsoft.Identity.Client.dll",
-        "lib/net462/Microsoft.Identity.Client.xml",
-        "lib/net472/Microsoft.Identity.Client.dll",
-        "lib/net472/Microsoft.Identity.Client.xml",
-        "lib/net8.0-android34.0/Microsoft.Identity.Client.aar",
-        "lib/net8.0-android34.0/Microsoft.Identity.Client.dll",
-        "lib/net8.0-android34.0/Microsoft.Identity.Client.xml",
-        "lib/net8.0-ios18.0/Microsoft.Identity.Client.dll",
-        "lib/net8.0-ios18.0/Microsoft.Identity.Client.xml",
-        "lib/net8.0/Microsoft.Identity.Client.dll",
-        "lib/net8.0/Microsoft.Identity.Client.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Client.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.4.85.1.nupkg.sha512",
-        "microsoft.identity.client.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Client.Extensions.Msal/4.83.1": {
-      "sha512": "I3k4J4Hj4KbLEFanjeUzzDOVecukETaTgEkJ7h2pP/Yazs6SLp6TVUTo/Eo+ptPXMwvc+iX7rBFtMSUrA7R+Mg==",
-      "type": "package",
-      "path": "microsoft.identity.client.extensions.msal/4.83.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll",
-        "lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.xml",
-        "microsoft.identity.client.extensions.msal.4.83.1.nupkg.sha512",
-        "microsoft.identity.client.extensions.msal.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Client.KeyAttestation/4.85.1": {
-      "sha512": "3xlrXjBd4I7ldxoNgnKPXyQoBeXZJQIqGvQcbTpCEw2Ol9xzLJp1Bh/BWwyUMphI+ND8IBQ0pQotv2pwEdn8uQ==",
-      "type": "package",
-      "path": "microsoft.identity.client.keyattestation/4.85.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Microsoft.Identity.Client.KeyAttestation.dll",
-        "lib/net8.0/Microsoft.Identity.Client.KeyAttestation.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Client.KeyAttestation.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Client.KeyAttestation.xml",
-        "microsoft.identity.client.keyattestation.4.85.1.nupkg.sha512",
-        "microsoft.identity.client.keyattestation.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Web/4.11.0": {
-      "sha512": "s7/up7XohCu7I+9Oio8OqqHQbhkPqA3OeQQ/nr/CcKtCQryY2nbgoT53ofxJ6npO2dggjpePvOWC+rs832RKXg==",
-      "type": "package",
-      "path": "microsoft.identity.web/4.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/net10.0/Microsoft.Identity.Web.dll",
-        "lib/net10.0/Microsoft.Identity.Web.xml",
-        "lib/net462/Microsoft.Identity.Web.dll",
-        "lib/net462/Microsoft.Identity.Web.xml",
-        "lib/net472/Microsoft.Identity.Web.dll",
-        "lib/net472/Microsoft.Identity.Web.xml",
-        "lib/net8.0/Microsoft.Identity.Web.dll",
-        "lib/net8.0/Microsoft.Identity.Web.xml",
-        "lib/net9.0/Microsoft.Identity.Web.dll",
-        "lib/net9.0/Microsoft.Identity.Web.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Web.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Web.xml",
-        "microsoft.identity.web.4.11.0.nupkg.sha512",
-        "microsoft.identity.web.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Web.Certificate/4.11.0": {
-      "sha512": "XCnWMBOmu17mGBYe7i7zOZPkeS+Byy/6JgT8hA93BXIWYiA8E3fb37JWsOj9bInMSH/088BvTi0A1C1I4uu+3Q==",
-      "type": "package",
-      "path": "microsoft.identity.web.certificate/4.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/net10.0/Microsoft.Identity.Web.Certificate.dll",
-        "lib/net10.0/Microsoft.Identity.Web.Certificate.xml",
-        "lib/net462/Microsoft.Identity.Web.Certificate.dll",
-        "lib/net462/Microsoft.Identity.Web.Certificate.xml",
-        "lib/net472/Microsoft.Identity.Web.Certificate.dll",
-        "lib/net472/Microsoft.Identity.Web.Certificate.xml",
-        "lib/net8.0/Microsoft.Identity.Web.Certificate.dll",
-        "lib/net8.0/Microsoft.Identity.Web.Certificate.xml",
-        "lib/net9.0/Microsoft.Identity.Web.Certificate.dll",
-        "lib/net9.0/Microsoft.Identity.Web.Certificate.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Web.Certificate.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Web.Certificate.xml",
-        "microsoft.identity.web.certificate.4.11.0.nupkg.sha512",
-        "microsoft.identity.web.certificate.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Web.Certificateless/4.11.0": {
-      "sha512": "DqL9gUs+BDAgqPlfw8U2hQWAh8toocmGXekKPrMZAyL2gRcHBgonQdX92jPIYAz2j5xwmVRyhBTvpdOCAwwIZw==",
-      "type": "package",
-      "path": "microsoft.identity.web.certificateless/4.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/netstandard2.0/Microsoft.Identity.Web.Certificateless.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Web.Certificateless.xml",
-        "microsoft.identity.web.certificateless.4.11.0.nupkg.sha512",
-        "microsoft.identity.web.certificateless.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Web.Diagnostics/4.11.0": {
-      "sha512": "MUDbQptxwUPn7C1ukBjGtiY9GTh3qdbZjK4cgSH8CUIeVqjFCr12slO0ZdloiZrlD72GJQc3H1apIWm1ids4qA==",
-      "type": "package",
-      "path": "microsoft.identity.web.diagnostics/4.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/net10.0/Microsoft.Identity.Web.Diagnostics.dll",
-        "lib/net10.0/Microsoft.Identity.Web.Diagnostics.xml",
-        "lib/net462/Microsoft.Identity.Web.Diagnostics.dll",
-        "lib/net462/Microsoft.Identity.Web.Diagnostics.xml",
-        "lib/net472/Microsoft.Identity.Web.Diagnostics.dll",
-        "lib/net472/Microsoft.Identity.Web.Diagnostics.xml",
-        "lib/net8.0/Microsoft.Identity.Web.Diagnostics.dll",
-        "lib/net8.0/Microsoft.Identity.Web.Diagnostics.xml",
-        "lib/net9.0/Microsoft.Identity.Web.Diagnostics.dll",
-        "lib/net9.0/Microsoft.Identity.Web.Diagnostics.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Web.Diagnostics.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Web.Diagnostics.xml",
-        "microsoft.identity.web.diagnostics.4.11.0.nupkg.sha512",
-        "microsoft.identity.web.diagnostics.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Web.TokenAcquisition/4.11.0": {
-      "sha512": "v8VgrML9SppzjdZPnhKX/se0RQbJiHocGF9NsJKVJsZSwb7KRVaGfnTaGdLggiQwYj+zzn6OVsJhmREfajc58w==",
-      "type": "package",
-      "path": "microsoft.identity.web.tokenacquisition/4.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/net10.0/Microsoft.Identity.Web.TokenAcquisition.dll",
-        "lib/net10.0/Microsoft.Identity.Web.TokenAcquisition.xml",
-        "lib/net462/Microsoft.Identity.Web.TokenAcquisition.dll",
-        "lib/net462/Microsoft.Identity.Web.TokenAcquisition.xml",
-        "lib/net472/Microsoft.Identity.Web.TokenAcquisition.dll",
-        "lib/net472/Microsoft.Identity.Web.TokenAcquisition.xml",
-        "lib/net8.0/Microsoft.Identity.Web.TokenAcquisition.dll",
-        "lib/net8.0/Microsoft.Identity.Web.TokenAcquisition.xml",
-        "lib/net9.0/Microsoft.Identity.Web.TokenAcquisition.dll",
-        "lib/net9.0/Microsoft.Identity.Web.TokenAcquisition.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Web.TokenAcquisition.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Web.TokenAcquisition.xml",
-        "microsoft.identity.web.tokenacquisition.4.11.0.nupkg.sha512",
-        "microsoft.identity.web.tokenacquisition.nuspec"
-      ]
-    },
-    "Microsoft.Identity.Web.TokenCache/4.11.0": {
-      "sha512": "8VoDH7yQUYU+yBZTHZX1ev3vnjnkEioQafy9y/qGwv15GO2Gu0HuQYcfaeZm1aUT4h/dC8arBZjoYZNAVG+mug==",
-      "type": "package",
-      "path": "microsoft.identity.web.tokencache/4.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/net10.0/Microsoft.Identity.Web.TokenCache.dll",
-        "lib/net10.0/Microsoft.Identity.Web.TokenCache.xml",
-        "lib/net462/Microsoft.Identity.Web.TokenCache.dll",
-        "lib/net462/Microsoft.Identity.Web.TokenCache.xml",
-        "lib/net472/Microsoft.Identity.Web.TokenCache.dll",
-        "lib/net472/Microsoft.Identity.Web.TokenCache.xml",
-        "lib/net8.0/Microsoft.Identity.Web.TokenCache.dll",
-        "lib/net8.0/Microsoft.Identity.Web.TokenCache.xml",
-        "lib/net9.0/Microsoft.Identity.Web.TokenCache.dll",
-        "lib/net9.0/Microsoft.Identity.Web.TokenCache.xml",
-        "lib/netstandard2.0/Microsoft.Identity.Web.TokenCache.dll",
-        "lib/netstandard2.0/Microsoft.Identity.Web.TokenCache.xml",
-        "microsoft.identity.web.tokencache.4.11.0.nupkg.sha512",
-        "microsoft.identity.web.tokencache.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Abstractions/8.19.1": {
-      "sha512": "gFA8THIk23uNF/vMdOHnjIdXD1LyA2g12cHzMJ+Xag6WpgWLw6E/6uCXxvA0gp9d2yAvkRt3xzFzMUiO/hofnQ==",
-      "type": "package",
-      "path": "microsoft.identitymodel.abstractions/8.19.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll",
-        "lib/net10.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/net462/Microsoft.IdentityModel.Abstractions.dll",
         "lib/net462/Microsoft.IdentityModel.Abstractions.xml",
         "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
@@ -3455,20 +1640,18 @@
         "lib/net9.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
-        "microsoft.identitymodel.abstractions.8.19.1.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/8.19.1": {
-      "sha512": "6eeY+y2QFyjj3XnCz/8gJdoP5smYHTS9ow1bw2nsZzDIPjPhBZlackYTIduSMipVpxnoT/B62LkrXX2jPggOXg==",
+    "Microsoft.IdentityModel.JsonWebTokens/8.14.0": {
+      "sha512": "4jOpiA4THdtpLyMdAb24dtj7+6GmvhOhxf5XHLYWmPKF8ApEnApal1UnJsKO4HxUWRXDA6C4WQVfYyqsRhpNpQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/8.19.1",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/net462/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/net462/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/net472/Microsoft.IdentityModel.JsonWebTokens.dll",
@@ -3481,20 +1664,18 @@
         "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.8.19.1.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/8.19.1": {
-      "sha512": "H+sMrMpdbWnwkQnpb/ESkQovtOgdefmj0ecGCcP40mDKzE5i4dUYkH6599M9mWYFNGNJnTp92l/9wLubYXWimw==",
+    "Microsoft.IdentityModel.Logging/8.14.0": {
+      "sha512": "eqqnemdW38CKZEHS6diA50BV94QICozDZEvSrsvN3SJXUFwVB9gy+/oz76gldP7nZliA16IglXjXTCTdmU/Ejg==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/8.19.1",
+      "path": "microsoft.identitymodel.logging/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.Logging.dll",
-        "lib/net10.0/Microsoft.IdentityModel.Logging.xml",
         "lib/net462/Microsoft.IdentityModel.Logging.dll",
         "lib/net462/Microsoft.IdentityModel.Logging.xml",
         "lib/net472/Microsoft.IdentityModel.Logging.dll",
@@ -3507,37 +1688,17 @@
         "lib/net9.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.8.19.1.nupkg.sha512",
+        "microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.LoggingExtensions/8.19.1": {
-      "sha512": "YFJNHXN56yUgH6h0pmo2SbaukorhW3rvw2Td+jDeFeXQxO2fC8x3i5fmyTmKoouJdjiP430FvAk8vWVp93zaeA==",
+    "Microsoft.IdentityModel.Protocols/8.0.1": {
+      "sha512": "uA2vpKqU3I2mBBEaeJAWPTjT9v1TZrGWKdgK6G5qJd03CLx83kdiqO9cmiK8/n1erkHzFBwU/RphP83aAe3i3g==",
       "type": "package",
-      "path": "microsoft.identitymodel.loggingextensions/8.19.1",
+      "path": "microsoft.identitymodel.protocols/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net10.0/Microsoft.IdentityModel.LoggingExtensions.dll",
-        "lib/net10.0/Microsoft.IdentityModel.LoggingExtensions.xml",
-        "lib/net9.0/Microsoft.IdentityModel.LoggingExtensions.dll",
-        "lib/net9.0/Microsoft.IdentityModel.LoggingExtensions.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.LoggingExtensions.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.LoggingExtensions.xml",
-        "microsoft.identitymodel.loggingextensions.8.19.1.nupkg.sha512",
-        "microsoft.identitymodel.loggingextensions.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Protocols/8.19.1": {
-      "sha512": "7jtpdKFIncGCmob3y3LnSHihCYtmw8mlPFI+DV5rdx4YFOfCVlNQ9RhtLAQnjC9kges1+w/8BCnAN3QhqOc0ng==",
-      "type": "package",
-      "path": "microsoft.identitymodel.protocols/8.19.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.Protocols.dll",
-        "lib/net10.0/Microsoft.IdentityModel.Protocols.xml",
         "lib/net462/Microsoft.IdentityModel.Protocols.dll",
         "lib/net462/Microsoft.IdentityModel.Protocols.xml",
         "lib/net472/Microsoft.IdentityModel.Protocols.dll",
@@ -3550,20 +1711,17 @@
         "lib/net9.0/Microsoft.IdentityModel.Protocols.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.xml",
-        "microsoft.identitymodel.protocols.8.19.1.nupkg.sha512",
+        "microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
         "microsoft.identitymodel.protocols.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.19.1": {
-      "sha512": "+PL2cgXLdYTEi0y1jnz0DfnNjU8Ncwp8+QZnDKuF5hWXqd9oNKHwR27MgZjOw9F2lUigA58BqaMkuO1orvnpgw==",
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1": {
+      "sha512": "AQDbfpL+yzuuGhO/mQhKNsp44pm5Jv8/BI4KiFXR7beVGZoSH35zMV3PrmcfvSTsyI6qrcR898NzUauD6SRigg==",
       "type": "package",
-      "path": "microsoft.identitymodel.protocols.openidconnect/8.19.1",
+      "path": "microsoft.identitymodel.protocols.openidconnect/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
         "lib/net462/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
         "lib/net462/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
         "lib/net472/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
@@ -3576,20 +1734,18 @@
         "lib/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
-        "microsoft.identitymodel.protocols.openidconnect.8.19.1.nupkg.sha512",
+        "microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
         "microsoft.identitymodel.protocols.openidconnect.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/8.19.1": {
-      "sha512": "KDiuSLXud2AFVNAOottd8ztVysfPeHyr4r8gofU3/VKUXlI7oytzGTnPsNJ/B3nui17rgz8wAdWNJOtzPjkUxw==",
+    "Microsoft.IdentityModel.Tokens/8.14.0": {
+      "sha512": "lKIZiBiGd36k02TCdMHp1KlNWisyIvQxcYJvIkz7P4gSQ9zi8dgh6S5Grj8NNG7HWYIPfQymGyoZ6JB5d1Lo1g==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/8.19.1",
+      "path": "microsoft.identitymodel.tokens/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.Tokens.dll",
-        "lib/net10.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/net462/Microsoft.IdentityModel.Tokens.dll",
         "lib/net462/Microsoft.IdentityModel.Tokens.xml",
         "lib/net472/Microsoft.IdentityModel.Tokens.dll",
@@ -3602,196 +1758,8 @@
         "lib/net9.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.8.19.1.nupkg.sha512",
+        "microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Validators/8.19.1": {
-      "sha512": "SFIgK2XEspAtYLPAi99ICL4IvJHumVLBcQKg59TVM1ZwSd+hlU2ygd1aUdbtxE3nnKFawdktgWnmvlJCauoW5Q==",
-      "type": "package",
-      "path": "microsoft.identitymodel.validators/8.19.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.IdentityModel.Validators.dll",
-        "lib/net10.0/Microsoft.IdentityModel.Validators.xml",
-        "lib/net462/Microsoft.IdentityModel.Validators.dll",
-        "lib/net462/Microsoft.IdentityModel.Validators.xml",
-        "lib/net472/Microsoft.IdentityModel.Validators.dll",
-        "lib/net472/Microsoft.IdentityModel.Validators.xml",
-        "lib/net6.0/Microsoft.IdentityModel.Validators.dll",
-        "lib/net6.0/Microsoft.IdentityModel.Validators.xml",
-        "lib/net8.0/Microsoft.IdentityModel.Validators.dll",
-        "lib/net8.0/Microsoft.IdentityModel.Validators.xml",
-        "lib/net9.0/Microsoft.IdentityModel.Validators.dll",
-        "lib/net9.0/Microsoft.IdentityModel.Validators.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Validators.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Validators.xml",
-        "microsoft.identitymodel.validators.8.19.1.nupkg.sha512",
-        "microsoft.identitymodel.validators.nuspec"
-      ]
-    },
-    "Microsoft.IO.RecyclableMemoryStream/3.0.1": {
-      "sha512": "s/s20YTVY9r9TPfTrN5g8zPF1YhwxyqO6PxUkrYTGI2B+OGPe9AdajWZrLhFqXIvqIW23fnUE4+ztrUWNU1+9g==",
-      "type": "package",
-      "path": "microsoft.io.recyclablememorystream/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll",
-        "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.xml",
-        "lib/netstandard2.0/Microsoft.IO.RecyclableMemoryStream.dll",
-        "lib/netstandard2.0/Microsoft.IO.RecyclableMemoryStream.xml",
-        "lib/netstandard2.1/Microsoft.IO.RecyclableMemoryStream.dll",
-        "lib/netstandard2.1/Microsoft.IO.RecyclableMemoryStream.xml",
-        "microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
-        "microsoft.io.recyclablememorystream.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Abstractions/2.0.0": {
-      "sha512": "cb0KA6QGvqMR1xNIjmErb5CiEbQJ/6odKcuPn2GTWD+aRMuldKDqRqRWMDT7MOBcUk9waJyJsgDG+ItQA01JmA==",
-      "type": "package",
-      "path": "microsoft.kiota.abstractions/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Abstractions.dll",
-        "lib/net10.0/Microsoft.Kiota.Abstractions.xml",
-        "lib/net8.0/Microsoft.Kiota.Abstractions.dll",
-        "lib/net8.0/Microsoft.Kiota.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Abstractions.xml",
-        "microsoft.kiota.abstractions.2.0.0.nupkg.sha512",
-        "microsoft.kiota.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Authentication.Azure/2.0.0": {
-      "sha512": "O890EE/4mIwfZbAeayZ0dXMSJVZWwUDcvOeH2GEmUbEQlSn+w37OHhuPClhIN4UO7EcqNC5N9ynyQWhOF+FWCg==",
-      "type": "package",
-      "path": "microsoft.kiota.authentication.azure/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/net10.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/net8.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/net8.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Authentication.Azure.xml",
-        "microsoft.kiota.authentication.azure.2.0.0.nupkg.sha512",
-        "microsoft.kiota.authentication.azure.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Http.HttpClientLibrary/2.0.0": {
-      "sha512": "oZ3ZR84InWEST6GyO9EBZMHweeprzlMiVsGy5dt9ec8Py1d6fgs4Yyyv0LJ56WoPc3Og5mM84pz3qD4hpiCT9w==",
-      "type": "package",
-      "path": "microsoft.kiota.http.httpclientlibrary/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net10.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net462/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net462/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net8.0-browser1.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net8.0-browser1.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "microsoft.kiota.http.httpclientlibrary.2.0.0.nupkg.sha512",
-        "microsoft.kiota.http.httpclientlibrary.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Form/2.0.0": {
-      "sha512": "Sm7dLRzwJRx80o/U5LUI0ICX4k0hT3tZgLAfXbO/UehsX4YVu6yiuOwCNdXlvE9tnC5LWcQdi9RRCSo3fQgI+A==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.form/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Form.xml",
-        "microsoft.kiota.serialization.form.2.0.0.nupkg.sha512",
-        "microsoft.kiota.serialization.form.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Json/2.0.0": {
-      "sha512": "0QB6RWSA3u7kQEDyaY3a3dVA98Fk2UwuYpusvX2aXmkQLPFijW4XKujQazHMoalx26fmSg6RF85ZJBqGzmgucA==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.json/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Json.xml",
-        "microsoft.kiota.serialization.json.2.0.0.nupkg.sha512",
-        "microsoft.kiota.serialization.json.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Multipart/2.0.0": {
-      "sha512": "IR27DQpYul43E+2Nw2mzEMFIzwiRjQCnCOfylIE/dlFra3QjoT/s5bhYv9ZN182U0ajkiQYYT/UORvpgGau4mw==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.multipart/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Multipart.xml",
-        "microsoft.kiota.serialization.multipart.2.0.0.nupkg.sha512",
-        "microsoft.kiota.serialization.multipart.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Text/2.0.0": {
-      "sha512": "yuQZ8VIWc3NCpK439zG105sAfyFkq8kA+fvxfXI1DA76gTGKNLBJtX8ljyuhMhcYCl/Uu9AOm/vfbbI/P5TapQ==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.text/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/net10.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Text.xml",
-        "microsoft.kiota.serialization.text.2.0.0.nupkg.sha512",
-        "microsoft.kiota.serialization.text.nuspec"
       ]
     },
     "Microsoft.OpenApi/1.2.3": {
@@ -3811,72 +1779,6 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "MiniProfiler.AspNetCore/4.2.22": {
-      "sha512": "bBirB5d4Q0Bgx05Zg4yzXSmOHZQV4ZJhmxU3DGya4FZxNBwjaVHchqEKY0MJW5XLZo8axMAQm4yywgCvUlTymA==",
-      "type": "package",
-      "path": "miniprofiler.aspnetcore/4.2.22",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/net461/MiniProfiler.AspNetCore.dll",
-        "lib/net461/MiniProfiler.AspNetCore.xml",
-        "lib/netcoreapp3.0/MiniProfiler.AspNetCore.dll",
-        "lib/netcoreapp3.0/MiniProfiler.AspNetCore.xml",
-        "lib/netstandard2.0/MiniProfiler.AspNetCore.dll",
-        "lib/netstandard2.0/MiniProfiler.AspNetCore.xml",
-        "miniprofiler.aspnetcore.4.2.22.nupkg.sha512",
-        "miniprofiler.aspnetcore.nuspec"
-      ]
-    },
-    "MiniProfiler.AspNetCore.Mvc/4.2.22": {
-      "sha512": "nzCEaZnh77U9jw+c/qu4CtwYUpHEf+FH1ZMbYKMzIXr8CNNPlypSR6AJEAwjo3bq9TIJIpBMZIaK3inRLUCg4g==",
-      "type": "package",
-      "path": "miniprofiler.aspnetcore.mvc/4.2.22",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/net461/MiniProfiler.AspNetCore.Mvc.dll",
-        "lib/net461/MiniProfiler.AspNetCore.Mvc.xml",
-        "lib/netcoreapp3.0/MiniProfiler.AspNetCore.Mvc.dll",
-        "lib/netcoreapp3.0/MiniProfiler.AspNetCore.Mvc.xml",
-        "lib/netstandard2.0/MiniProfiler.AspNetCore.Mvc.dll",
-        "lib/netstandard2.0/MiniProfiler.AspNetCore.Mvc.xml",
-        "miniprofiler.aspnetcore.mvc.4.2.22.nupkg.sha512",
-        "miniprofiler.aspnetcore.mvc.nuspec"
-      ]
-    },
-    "MiniProfiler.EntityFrameworkCore/4.2.22": {
-      "sha512": "DV8jDHmp7DVN3B/FevAaAqLDBnPYRxjS8NDF7ZAJ3/6ZqOGjhyvIG1e44XjUUOeUtmJQoPSwqmeX692Y6m+G/A==",
-      "type": "package",
-      "path": "miniprofiler.entityframeworkcore/4.2.22",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/netstandard2.0/MiniProfiler.EntityFrameworkCore.dll",
-        "lib/netstandard2.0/MiniProfiler.EntityFrameworkCore.xml",
-        "miniprofiler.entityframeworkcore.4.2.22.nupkg.sha512",
-        "miniprofiler.entityframeworkcore.nuspec"
-      ]
-    },
-    "MiniProfiler.Shared/4.2.22": {
-      "sha512": "OOA99Iu7FjFrdYaADcWL78KK9Kq6M+hfnZac5577aSrx0UYOM2apKlhBPKzoPtGPTRtQNKe4RK00u/FmahcU3g==",
-      "type": "package",
-      "path": "miniprofiler.shared/4.2.22",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/net461/MiniProfiler.Shared.dll",
-        "lib/net461/MiniProfiler.Shared.xml",
-        "lib/netstandard2.0/MiniProfiler.Shared.dll",
-        "lib/netstandard2.0/MiniProfiler.Shared.xml",
-        "miniprofiler.shared.4.2.22.nupkg.sha512",
-        "miniprofiler.shared.nuspec"
-      ]
-    },
     "Mono.TextTemplating/2.2.1": {
       "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "type": "package",
@@ -3890,41 +1792,10 @@
         "mono.texttemplating.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Npgsql/8.0.0": {
+      "sha512": "Qiz74U+O7Mv4knrsXgKVYGJjgwoziK+aMFZqz7PtKR3vyGIhZA0tnW6HoUnL3X+YqtmVuhmoKkN8LDWEHMxPbw==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "Npgsql/8.0.3": {
-      "sha512": "6WEmzsQJCZAlUG1pThKg/RmeF6V+I0DmBBBE/8YzpRtEzhyZzKcK7ulMANDm5CkxrALBEC8H+5plxHWtIL7xnA==",
-      "type": "package",
-      "path": "npgsql/8.0.3",
+      "path": "npgsql/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3939,7 +1810,7 @@
         "lib/netstandard2.0/Npgsql.xml",
         "lib/netstandard2.1/Npgsql.dll",
         "lib/netstandard2.1/Npgsql.xml",
-        "npgsql.8.0.3.nupkg.sha512",
+        "npgsql.8.0.0.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
@@ -3957,55 +1828,6 @@
         "npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
-      ]
-    },
-    "NWebsec.AspNetCore.Core/3.0.0": {
-      "sha512": "dvrs4Lvc7k98KKaMxKPHeOn0kONEIQpVrzweji9SLl9XEn1+XWVJe5f7mNvXoKPKjjcNuBIwVXr3K+g+DzZHEw==",
-      "type": "package",
-      "path": "nwebsec.aspnetcore.core/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.1/NWebsec.AspNetCore.Core.dll",
-        "lib/netcoreapp3.1/NWebsec.AspNetCore.Core.xml",
-        "nwebsec.aspnetcore.core.3.0.0.nupkg.sha512",
-        "nwebsec.aspnetcore.core.nuspec"
-      ]
-    },
-    "NWebsec.AspNetCore.Middleware/3.0.0": {
-      "sha512": "sQJUG6zk/96UaAcFaf3fQuzjAS9rsf2fXyks1YlG4E3QOWl0h6nIO9fMzfKoskRA+abs01rV+6Kc5P7xccXlzw==",
-      "type": "package",
-      "path": "nwebsec.aspnetcore.middleware/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.1/NWebsec.AspNetCore.Middleware.dll",
-        "lib/netcoreapp3.1/NWebsec.AspNetCore.Middleware.xml",
-        "nwebsec.aspnetcore.middleware.3.0.0.nupkg.sha512",
-        "nwebsec.aspnetcore.middleware.nuspec"
-      ]
-    },
-    "Pipelines.Sockets.Unofficial/2.2.8": {
-      "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
-      "type": "package",
-      "path": "pipelines.sockets.unofficial/2.2.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/Pipelines.Sockets.Unofficial.dll",
-        "lib/net461/Pipelines.Sockets.Unofficial.xml",
-        "lib/net472/Pipelines.Sockets.Unofficial.dll",
-        "lib/net472/Pipelines.Sockets.Unofficial.xml",
-        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
-        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
-        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
-        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
-        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
-        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
-        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
-        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
-        "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
-        "pipelines.sockets.unofficial.nuspec"
       ]
     },
     "Serilog/2.10.0": {
@@ -4155,116 +1977,24 @@
         "serilog.sinks.debug.nuspec"
       ]
     },
-    "Serilog.Sinks.File/5.0.0": {
-      "sha512": "uwV5hdhWPwUH1szhO8PJpFiahqXmzPzJT/sOijH/kFgUx+cyoDTMM8MHD0adw9+Iem6itoibbUXHYslzXsLEAg==",
+    "Serilog.Sinks.File/4.1.0": {
+      "sha512": "U0b34w+ZikbqWEZ3ui7BdzxY/19zwrdhLtI3o6tfmLdD3oXxg7n2TZJjwCCTlKPgRuYic9CBWfrZevbb70mTaw==",
       "type": "package",
-      "path": "serilog.sinks.file/5.0.0",
+      "path": "serilog.sinks.file/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "images/icon.png",
         "lib/net45/Serilog.Sinks.File.dll",
         "lib/net45/Serilog.Sinks.File.pdb",
         "lib/net45/Serilog.Sinks.File.xml",
-        "lib/net5.0/Serilog.Sinks.File.dll",
-        "lib/net5.0/Serilog.Sinks.File.pdb",
-        "lib/net5.0/Serilog.Sinks.File.xml",
         "lib/netstandard1.3/Serilog.Sinks.File.dll",
         "lib/netstandard1.3/Serilog.Sinks.File.pdb",
         "lib/netstandard1.3/Serilog.Sinks.File.xml",
         "lib/netstandard2.0/Serilog.Sinks.File.dll",
         "lib/netstandard2.0/Serilog.Sinks.File.pdb",
         "lib/netstandard2.0/Serilog.Sinks.File.xml",
-        "lib/netstandard2.1/Serilog.Sinks.File.dll",
-        "lib/netstandard2.1/Serilog.Sinks.File.pdb",
-        "lib/netstandard2.1/Serilog.Sinks.File.xml",
-        "serilog.sinks.file.5.0.0.nupkg.sha512",
+        "serilog.sinks.file.4.1.0.nupkg.sha512",
         "serilog.sinks.file.nuspec"
-      ]
-    },
-    "Serilog.Sinks.PeriodicBatching/2.3.0": {
-      "sha512": "UYKSjTMTlUY9T3OgzMmLDLD+z0qPfgvq/RvG0rKfyz+O+Zrjw3X/Xpv14J4WMcGVsOjUaR+k8n2MdmqVpJtI6A==",
-      "type": "package",
-      "path": "serilog.sinks.periodicbatching/2.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Serilog.Sinks.PeriodicBatching.dll",
-        "lib/net45/Serilog.Sinks.PeriodicBatching.xml",
-        "lib/netstandard1.1/Serilog.Sinks.PeriodicBatching.dll",
-        "lib/netstandard1.1/Serilog.Sinks.PeriodicBatching.xml",
-        "lib/netstandard1.2/Serilog.Sinks.PeriodicBatching.dll",
-        "lib/netstandard1.2/Serilog.Sinks.PeriodicBatching.xml",
-        "lib/netstandard2.0/Serilog.Sinks.PeriodicBatching.dll",
-        "lib/netstandard2.0/Serilog.Sinks.PeriodicBatching.xml",
-        "serilog.sinks.periodicbatching.2.3.0.nupkg.sha512",
-        "serilog.sinks.periodicbatching.nuspec"
-      ]
-    },
-    "Serilog.Sinks.PostgreSQL/2.3.0": {
-      "sha512": "OdsbJOeloukuJuUfsb1JbEecRuXQCGtcDbWDCe0/kQJrcQUdIXRdkYdfgO4wAq5Y4kC0sde9bfZHSLjEIhJyFw==",
-      "type": "package",
-      "path": "serilog.sinks.postgresql/2.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "lib/net45/Serilog.Sinks.PostgreSQL.dll",
-        "lib/net45/Serilog.Sinks.PostgreSQL.xml",
-        "lib/net5.0/Serilog.Sinks.PostgreSQL.dll",
-        "lib/net5.0/Serilog.Sinks.PostgreSQL.xml",
-        "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.dll",
-        "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.xml",
-        "serilog.sinks.postgresql.2.3.0.nupkg.sha512",
-        "serilog.sinks.postgresql.nuspec"
-      ]
-    },
-    "Serilog.Sinks.PostgreSQL.Configuration/1.0.1": {
-      "sha512": "LN9MVZeB8i38GU6iAFya9La74Z8TlD/oSjWU8l9fs7dN/92bhiUUQrnrAZ3IiJCJMc0D+X5DUNL4eoleV6ytxw==",
-      "type": "package",
-      "path": "serilog.sinks.postgresql.configuration/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "lib/netstandard2.0/Serilog.Sinks.PostgreSQL.Configuration.dll",
-        "serilog.sinks.postgresql.configuration.1.0.1.nupkg.sha512",
-        "serilog.sinks.postgresql.configuration.nuspec"
-      ]
-    },
-    "StackExchange.Redis/2.7.4": {
-      "sha512": "lD6a0lGOCyV9iuvObnzStL74EDWAyK31w6lS+Md9gIz1eP4U6KChDIflzTdtrktxlvVkeOvPtkaYOcm4qjbHSw==",
-      "type": "package",
-      "path": "stackexchange.redis/2.7.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/StackExchange.Redis.dll",
-        "lib/net461/StackExchange.Redis.xml",
-        "lib/net472/StackExchange.Redis.dll",
-        "lib/net472/StackExchange.Redis.xml",
-        "lib/net6.0/StackExchange.Redis.dll",
-        "lib/net6.0/StackExchange.Redis.xml",
-        "lib/netcoreapp3.1/StackExchange.Redis.dll",
-        "lib/netcoreapp3.1/StackExchange.Redis.xml",
-        "lib/netstandard2.0/StackExchange.Redis.dll",
-        "lib/netstandard2.0/StackExchange.Redis.xml",
-        "stackexchange.redis.2.7.4.nupkg.sha512",
-        "stackexchange.redis.nuspec"
-      ]
-    },
-    "Std.UriTemplate/2.0.8": {
-      "sha512": "IAR4gJlLVD4r/FsU/rDb1+9sbB3/tCFVZz5IzlbM2yHoiUisBi5Ek/KXRUF7RcqNARka79EoaOz9INnXvQ/O6w==",
-      "type": "package",
-      "path": "std.uritemplate/2.0.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Readme.md",
-        "lib/net5.0/Std.UriTemplate.dll",
-        "lib/netstandard2.0/Std.UriTemplate.dll",
-        "std.uritemplate.2.0.8.nupkg.sha512",
-        "std.uritemplate.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.3.0": {
@@ -4277,29 +2007,6 @@
         "build/Swashbuckle.AspNetCore.props",
         "swashbuckle.aspnetcore.6.3.0.nupkg.sha512",
         "swashbuckle.aspnetcore.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Annotations/6.3.0": {
-      "sha512": "MylnnwqP0OwHUnYAKc3v5jBlWHWLBoi5Jw2d+1Tw2ozPJGIBMko0XIlgBURMpEhV7vmIqjXEQ+zk5iDlFRfLIg==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.annotations/6.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/Swashbuckle.AspNetCore.Annotations.dll",
-        "lib/net5.0/Swashbuckle.AspNetCore.Annotations.pdb",
-        "lib/net5.0/Swashbuckle.AspNetCore.Annotations.xml",
-        "lib/net6.0/Swashbuckle.AspNetCore.Annotations.dll",
-        "lib/net6.0/Swashbuckle.AspNetCore.Annotations.pdb",
-        "lib/net6.0/Swashbuckle.AspNetCore.Annotations.xml",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.xml",
-        "swashbuckle.aspnetcore.annotations.6.3.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.annotations.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore.Swagger/6.3.0": {
@@ -4369,34 +2076,6 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "swashbuckle.aspnetcore.swaggerui.6.3.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
-      ]
-    },
-    "System.ClientModel/1.10.0": {
-      "sha512": "lBEWs54F5Y5pZ9hC+8z4S/X76957ex+DPk7WecRHlbIHtrPfbRMMlOgI3iDn4Jpb3bSxvBnKaaHoD59auFjlBA==",
-      "type": "package",
-      "path": "system.clientmodel/1.10.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGELOG.md",
-        "ConfigurationSchema.json",
-        "DotNetPackageIcon.png",
-        "README.md",
-        "analyzers/dotnet/cs/System.ClientModel.SourceGeneration.dll",
-        "buildTransitive/net10.0/System.ClientModel.targets",
-        "buildTransitive/net8.0/System.ClientModel.targets",
-        "buildTransitive/net9.0/System.ClientModel.targets",
-        "buildTransitive/netstandard2.0/System.ClientModel.targets",
-        "lib/net10.0/System.ClientModel.dll",
-        "lib/net10.0/System.ClientModel.xml",
-        "lib/net8.0/System.ClientModel.dll",
-        "lib/net8.0/System.ClientModel.xml",
-        "lib/net9.0/System.ClientModel.dll",
-        "lib/net9.0/System.ClientModel.xml",
-        "lib/netstandard2.0/System.ClientModel.dll",
-        "lib/netstandard2.0/System.ClientModel.xml",
-        "system.clientmodel.1.10.0.nupkg.sha512",
-        "system.clientmodel.nuspec"
       ]
     },
     "System.CodeDom/4.4.0": {
@@ -4552,16 +2231,13 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.IdentityModel.Tokens.Jwt/8.19.1": {
-      "sha512": "2VHcRtT95GAcW1E3aVBLvL2rAAMxKHXKMXKXFyWzwgkdFXZPMMvP8tVOfnRydL4vTr1RirNuGC6T8VSEF2YsPQ==",
+    "System.IdentityModel.Tokens.Jwt/8.0.1": {
+      "sha512": "GJw3bYkWpOgvN3tJo5X4lYUeIFA2HD293FPUhKmp7qxS+g5ywAb34Dnd3cDAFLkcMohy5XTpoaZ4uAHuw0uSPQ==",
       "type": "package",
-      "path": "system.identitymodel.tokens.jwt/8.19.1",
+      "path": "system.identitymodel.tokens.jwt/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll",
-        "lib/net10.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/net462/System.IdentityModel.Tokens.Jwt.dll",
         "lib/net462/System.IdentityModel.Tokens.Jwt.xml",
         "lib/net472/System.IdentityModel.Tokens.Jwt.dll",
@@ -4574,172 +2250,23 @@
         "lib/net9.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.8.19.1.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
-      ]
-    },
-    "System.Memory.Data/10.0.3": {
-      "sha512": "MaGhRfGunmrj/nHjtsi9XkhlYJ/ERGWrbA+BiSKNtGnAjc9XlG5EhAvak6VRcX5LYzPF6pBO8nJ613dTgzabig==",
-      "type": "package",
-      "path": "system.memory.data/10.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Memory.Data.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Memory.Data.targets",
-        "lib/net10.0/System.Memory.Data.dll",
-        "lib/net10.0/System.Memory.Data.xml",
-        "lib/net462/System.Memory.Data.dll",
-        "lib/net462/System.Memory.Data.xml",
-        "lib/net8.0/System.Memory.Data.dll",
-        "lib/net8.0/System.Memory.Data.xml",
-        "lib/net9.0/System.Memory.Data.dll",
-        "lib/net9.0/System.Memory.Data.xml",
-        "lib/netstandard2.0/System.Memory.Data.dll",
-        "lib/netstandard2.0/System.Memory.Data.xml",
-        "system.memory.data.10.0.3.nupkg.sha512",
-        "system.memory.data.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Security.Cryptography.Pkcs/10.0.7": {
-      "sha512": "dbdKfF3eA5l+CXiAbDxiCxdezoxeanbue1ck8m49ih1L9uZG6ry8Ul8On6vpragyMDJJP4rQHUY/SWgk66tCYA==",
-      "type": "package",
-      "path": "system.security.cryptography.pkcs/10.0.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
-        "lib/net10.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/net10.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/net462/System.Security.Cryptography.Pkcs.dll",
-        "lib/net462/System.Security.Cryptography.Pkcs.xml",
-        "lib/net8.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/net8.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/net9.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/net9.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
-        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.xml",
-        "system.security.cryptography.pkcs.10.0.7.nupkg.sha512",
-        "system.security.cryptography.pkcs.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Security.Cryptography.ProtectedData/4.5.0": {
-      "sha512": "wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
-      "type": "package",
-      "path": "system.security.cryptography.protecteddata/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
-        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
-        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
-        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
-        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
-        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
-        "system.security.cryptography.protecteddata.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "YamlDotNet/16.3.0": {
-      "sha512": "SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA==",
-      "type": "package",
-      "path": "yamldotnet/16.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "images/yamldotnet.png",
-        "lib/net47/YamlDotNet.dll",
-        "lib/net47/YamlDotNet.xml",
-        "lib/net6.0/YamlDotNet.dll",
-        "lib/net6.0/YamlDotNet.xml",
-        "lib/net8.0/YamlDotNet.dll",
-        "lib/net8.0/YamlDotNet.xml",
-        "lib/netstandard2.0/YamlDotNet.dll",
-        "lib/netstandard2.0/YamlDotNet.xml",
-        "lib/netstandard2.1/YamlDotNet.dll",
-        "lib/netstandard2.1/YamlDotNet.xml",
-        "yamldotnet.16.3.0.nupkg.sha512",
-        "yamldotnet.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Asp.Versioning.Mvc >= 8.1.0",
-      "Asp.Versioning.Mvc.ApiExplorer >= 8.1.0",
-      "AspNetCore.HealthChecks.Npgsql >= 8.0.2",
-      "AspNetCore.HealthChecks.Redis >= 8.0.1",
-      "AspNetCore.HealthChecks.UI >= 8.0.2",
-      "AspNetCore.HealthChecks.UI.Client >= 8.0.1",
-      "AspNetCore.HealthChecks.UI.PostgreSQL.Storage >= 8.0.1",
-      "AspNetCore.HealthChecks.uris >= 8.0.1",
       "AutoMapper >= 16.2.0",
-      "Azure.Identity >= 1.21.0",
-      "Google.Apis.Auth >= 1.54.0",
-      "KubernetesClient >= 17.0.14",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.0",
+      "Microsoft.AspNetCore.Authorization >= 10.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
-      "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore >= 8.0.0",
-      "Microsoft.Graph >= 6.2.0",
-      "Microsoft.Identity.Web >= 4.11.0",
-      "MiniProfiler.AspNetCore.Mvc >= 4.2.22",
-      "MiniProfiler.EntityFrameworkCore >= 4.2.22",
-      "NWebsec.AspNetCore.Middleware >= 3.0.0",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.0",
       "Serilog.AspNetCore >= 4.1.0",
       "Serilog.Settings.Configuration >= 3.2.0",
-      "Serilog.Sinks.PostgreSQL >= 2.3.0",
-      "Serilog.Sinks.PostgreSQL.Configuration >= 1.0.1",
-      "Swashbuckle.AspNetCore >= 6.3.0",
-      "Swashbuckle.AspNetCore.Annotations >= 6.3.0",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 6.3.0",
-      "serilog.sinks.file >= 5.0.0"
+      "Swashbuckle.AspNetCore >= 6.3.0"
     ]
   },
   "packageFolders": {
@@ -4795,55 +2322,15 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
-          "Asp.Versioning.Mvc": {
-            "target": "Package",
-            "version": "[8.1.0, )"
-          },
-          "Asp.Versioning.Mvc.ApiExplorer": {
-            "target": "Package",
-            "version": "[8.1.0, )"
-          },
-          "AspNetCore.HealthChecks.Npgsql": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "AspNetCore.HealthChecks.Redis": {
-            "target": "Package",
-            "version": "[8.0.1, )"
-          },
-          "AspNetCore.HealthChecks.UI": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "AspNetCore.HealthChecks.UI.Client": {
-            "target": "Package",
-            "version": "[8.0.1, )"
-          },
-          "AspNetCore.HealthChecks.UI.PostgreSQL.Storage": {
-            "target": "Package",
-            "version": "[8.0.1, )"
-          },
-          "AspNetCore.HealthChecks.uris": {
-            "target": "Package",
-            "version": "[8.0.1, )"
-          },
           "AutoMapper": {
             "target": "Package",
             "version": "[16.2.0, )"
           },
-          "Azure.Identity": {
-            "target": "Package",
-            "version": "[1.21.0, )"
-          },
-          "Google.Apis.Auth": {
-            "target": "Package",
-            "version": "[1.54.0, )"
-          },
-          "KubernetesClient": {
-            "target": "Package",
-            "version": "[17.0.14, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
+          "Microsoft.AspNetCore.Authorization": {
             "target": "Package",
             "version": "[10.0.0, )"
           },
@@ -4863,29 +2350,9 @@
             "target": "Package",
             "version": "[8.0.0, )"
           },
-          "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[8.0.0, )"
-          },
-          "Microsoft.Graph": {
-            "target": "Package",
-            "version": "[6.2.0, )"
-          },
-          "Microsoft.Identity.Web": {
-            "target": "Package",
-            "version": "[4.11.0, )"
-          },
-          "MiniProfiler.AspNetCore.Mvc": {
-            "target": "Package",
-            "version": "[4.2.22, )"
-          },
-          "MiniProfiler.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[4.2.22, )"
-          },
-          "NWebsec.AspNetCore.Middleware": {
-            "target": "Package",
-            "version": "[3.0.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",
@@ -4895,29 +2362,9 @@
             "target": "Package",
             "version": "[3.2.0, )"
           },
-          "Serilog.Sinks.PostgreSQL": {
-            "target": "Package",
-            "version": "[2.3.0, )"
-          },
-          "Serilog.Sinks.PostgreSQL.Configuration": {
-            "target": "Package",
-            "version": "[1.0.1, )"
-          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.3.0, )"
-          },
-          "Swashbuckle.AspNetCore.Annotations": {
-            "target": "Package",
-            "version": "[6.3.0, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerUI": {
-            "target": "Package",
-            "version": "[6.3.0, )"
-          },
-          "serilog.sinks.file": {
-            "target": "Package",
-            "version": "[5.0.0, )"
           }
         },
         "imports": [
@@ -5359,11 +2806,21 @@
   },
   "logs": [
     {
+      "code": "NU1510",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "PackageReference Microsoft.AspNetCore.Authorization will not be pruned. This package is automatically available and does not need to be referenced explicitly. Remove the PackageReference item.",
+      "libraryId": "Microsoft.AspNetCore.Authorization",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "libraryId": "Newtonsoft.Json",
+      "message": "Package 'Npgsql' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "libraryId": "Npgsql",
       "targetGraphs": [
         "net10.0"
       ]

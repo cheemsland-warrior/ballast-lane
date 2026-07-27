@@ -53,55 +53,15 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
-            "Asp.Versioning.Mvc": {
-              "target": "Package",
-              "version": "[8.1.0, )"
-            },
-            "Asp.Versioning.Mvc.ApiExplorer": {
-              "target": "Package",
-              "version": "[8.1.0, )"
-            },
-            "AspNetCore.HealthChecks.Npgsql": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "AspNetCore.HealthChecks.Redis": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "AspNetCore.HealthChecks.UI": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "AspNetCore.HealthChecks.UI.Client": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "AspNetCore.HealthChecks.UI.PostgreSQL.Storage": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "AspNetCore.HealthChecks.uris": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
             "AutoMapper": {
               "target": "Package",
               "version": "[16.2.0, )"
             },
-            "Azure.Identity": {
-              "target": "Package",
-              "version": "[1.21.0, )"
-            },
-            "Google.Apis.Auth": {
-              "target": "Package",
-              "version": "[1.54.0, )"
-            },
-            "KubernetesClient": {
-              "target": "Package",
-              "version": "[17.0.14, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[10.0.0, )"
             },
@@ -121,29 +81,9 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "Microsoft.Graph": {
-              "target": "Package",
-              "version": "[6.2.0, )"
-            },
-            "Microsoft.Identity.Web": {
-              "target": "Package",
-              "version": "[4.11.0, )"
-            },
-            "MiniProfiler.AspNetCore.Mvc": {
-              "target": "Package",
-              "version": "[4.2.22, )"
-            },
-            "MiniProfiler.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[4.2.22, )"
-            },
-            "NWebsec.AspNetCore.Middleware": {
-              "target": "Package",
-              "version": "[3.0.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -153,29 +93,9 @@
               "target": "Package",
               "version": "[3.2.0, )"
             },
-            "Serilog.Sinks.PostgreSQL": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
-            "Serilog.Sinks.PostgreSQL.Configuration": {
-              "target": "Package",
-              "version": "[1.0.1, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.0, )"
-            },
-            "Swashbuckle.AspNetCore.Annotations": {
-              "target": "Package",
-              "version": "[6.3.0, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[6.3.0, )"
-            },
-            "serilog.sinks.file": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             }
           },
           "imports": [

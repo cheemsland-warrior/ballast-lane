@@ -6,30 +6,18 @@ using AutoMapper;
 //using Domain.Models.AccountModels.AppUserModels;
 //using Domain.Models.AccountModels.JWT;
 // using HealthChecks.UI.Client; // removed: HealthChecks UI not used in simplified setup
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Web;
+using Microsoft.EntityFrameworkCore;
+using BallastLaneApi.Data;
+using BallastLaneApi.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 //using Persistence.Contexts;
 //using Persistence.Seeds;
 using Serilog;
 using Serilog.Events;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 
 // ==========================================
 // 1. BOOTSTRAP CONFIGURATION & EARLY LOGGING
@@ -81,89 +69,40 @@ try
                 System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString;
         });
 
-    // Register AutoMapper so IMapper is available for validation and injection
-    // This uses AutoMapper.Extensions.Microsoft.DependencyInjection
-    // and will scan the current assembly for profiles.
+    
     builder.Services.AddAutoMapperWithValidation(true);
 
-    //builder.Services.AddDatabaseConnectionsExtension(builder.Configuration);
-    //builder.Services.AddApplicationServicesExtension();
-    //builder.Services.AddIdentityServiceExtension(builder.Configuration);
-    //builder.Services.AddApiVersioningExtension();
-    // Register Swagger services so the Swagger middleware has its required DI services.
+ 
     builder.Services.AddSwaggerExtension();
-    //builder.Services.AddAutoMapperWithValidation(builder.Environment.IsDevelopment());
-    //builder.Services.AddHealthCheckExtension(builder.Configuration);
-
-    //// MiniProfiler registrations
-    //builder.Services.AddMiniProfilerExtension();
-    //builder.Services.AddMiniProfilerExtension(); // Retained duplicate from your original file
-
-    //builder.Services.AddSingleton<IAzureGroupService, AzureGroupService>();
-
-    // Azure AD Authentication Only
+    // Configure Entity Framework and application services
+    var conn = builder.Configuration.GetConnectionString("DefaultConnection")
+               ?? "Host=localhost;Port=5432;Database=yourappdb;Username=postgres;Password=Secret";
+    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(conn));
+    builder.Services.AddScoped<IUserService, UserService>();
+    builder.Services.AddScoped<IPotholeService, PotholeService>();
+    builder.Services.AddScoped<IAuthService, AuthService>();
+    // JWT Authentication
+    var jwtKey = builder.Configuration["Jwt:Key"] ?? "please-change-this-secret-in-production";
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.RequireHttpsMetadata = false;
+            options.SaveToken = true;
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true
+            };
+        });
+    builder.Services.AddAuthorization();
     JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
-
-    //builder.Services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, options =>
-    //{
-    //    var existingAuthenticationFailed = options.Events.OnAuthenticationFailed;
-    //    var existingChallenge = options.Events.OnChallenge;
-    //    var existingTokenValidated = options.Events.OnTokenValidated;
-
-    //    options.Authority = "https://login.microsoftonline.com/common/v2.0";
-    //    options.TokenValidationParameters = new TokenValidationParameters
-    //    {
-    //        ValidateIssuer = false,
-    //        ValidAudiences = new[]
-    //        {
-    //            "da993ebb-230e-4772-a386-5a77860db2fd",
-    //            "api://da993ebb-230e-4772-a386-5a77860db2fd"
-    //        }
-    //    };
-
-    //    options.Events.OnAuthenticationFailed = async context =>
-    //    {
-    //        if (existingAuthenticationFailed != null) await existingAuthenticationFailed(context);
-
-    //        Console.WriteLine($"[JWT Debug] Authentication failed: {context.Exception.Message}");
-    //        if (context.Exception.InnerException != null)
-    //        {
-    //            Console.WriteLine($"[JWT Debug] Inner exception: {context.Exception.InnerException.Message}");
-    //        }
-    //    };
-
-    //    options.Events.OnChallenge = async context =>
-    //    {
-    //        if (existingChallenge != null) await existingChallenge(context);
-
-    //        Console.WriteLine($"[JWT Debug] Challenge triggered. Error: {context.Error}, Error Description: {context.ErrorDescription}");
-    //    };
-
-    //    options.Events.OnTokenValidated = async context =>
-    //    {
-    //        if (existingTokenValidated != null) await existingTokenValidated(context);
-
-    //        Console.WriteLine("[JWT Debug] Token validated successfully!");
-    //    };
-    //});
-
-    builder.Services.AddAuthorization(options =>
-    {
-        options.AddPolicy("IsCheemslandBusiness", policy =>
-            policy.RequireClaim("groups", "a7c5b20c-6bca-484d-829e-de5166253009"));
-    });
-
-    //builder.Services.AddScoped<IOrderService, OrderService>();
-    //builder.Services.AddScoped<IChallengeOrderService, ChallengeOrderService>();
 
     var app = builder.Build();
 
-    // ==========================================
-    // 3. RUNTIME INITIALIZATION (Validation & Seed)
-    // ==========================================
     if (app.Environment.IsDevelopment())
     {
         using var validationScope = app.Services.CreateScope();
@@ -205,13 +144,12 @@ try
     // 4. CONFIGURE HTTP PIPELINE (Middleware)
     // ==========================================
     app.UseCookiePolicy();
-    //app.UseMiddleware<ExceptionMiddleware>();
 
     if (app.Environment.IsDevelopment())
     {
         app.UseSwaggerDocumentation();
 
-        app.UseMiniProfiler();
+        
     }
     else
     {
@@ -224,22 +162,7 @@ try
 
     app.UseStatusCodePagesWithReExecute("/errors/{0}");
     app.UseHttpsRedirection();
-    //app.UseStaticFiles();
-
-    // Ensure the Content directory exists before registering it as a PhysicalFileProvider.
-    var contentPath = Path.Combine(Directory.GetCurrentDirectory(), "Content");
-    if (!Directory.Exists(contentPath))
-    {
-        Log.Warning("Content directory not found at {ContentPath}. Creating it.", contentPath);
-        Directory.CreateDirectory(contentPath);
-    }
-
-    app.UseStaticFiles(new StaticFileOptions
-    {
-        FileProvider = new PhysicalFileProvider(contentPath),
-        RequestPath = "/content"
-    });
-
+   
     app.UseSerilogRequestLogging(options =>
     {
         options.GetLevel = (httpContext, elapsed, ex) => LogEventLevel.Information;

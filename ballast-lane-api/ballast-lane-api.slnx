@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../TestingProject/TestingProject.csproj" Id="aa9170c0-3343-4592-a585-08dc99bae13a" />
   <Project Path="ballast-lane-api.csproj" />
 </Solution>

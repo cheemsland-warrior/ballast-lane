@@ -193,3 +193,4 @@ C:\Git\ballast-lane\ballast-lane\ballast-lane-api\obj\Debug\net10.0\ballast-lane
 C:\Git\ballast-lane\ballast-lane\ballast-lane-api\obj\Debug\net10.0\ballast-lane-api.genruntimeconfig.cache
 C:\Git\ballast-lane\ballast-lane\ballast-lane-api\obj\Debug\net10.0\ref\ballast-lane-api.dll
 C:\Git\ballast-lane\ballast-lane\ballast-lane-api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Git\ballast-lane\ballast-lane\ballast-lane-api\obj\Debug\net10.0\ballast-lane-api.sourcelink.json

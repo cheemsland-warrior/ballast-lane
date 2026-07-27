@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ballast-lane-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9165f079654cf08913a130f82cab4492d2dc01c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ballast-lane-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ballast-lane-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

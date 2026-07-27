@@ -1,0 +1,24 @@
+<section class="login-card">
+  <h2>Login</h2>
+  <p>Sign in to access pothole features.</p>
+
+  <app-message-list></app-message-list>
+
+  <form [formGroup]="loginForm" (ngSubmit)="submit()" novalidate>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="you@example.com" />
+      <small *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')">Email is required.</small>
+      <small *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('email')">Please enter a valid email.</small>
+    </div>
+
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Enter password" />
+      <small *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')">Password is required.</small>
+      <small *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('minlength')">Password must be at least 6 characters.</small>
+    </div>
+
+    <button type="submit" [disabled]="isSubmitting">{{ isSubmitting ? 'Signing in...' : 'Login' }}</button>
+  </form>
+</section>

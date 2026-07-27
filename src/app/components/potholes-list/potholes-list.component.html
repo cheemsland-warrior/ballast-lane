@@ -1,0 +1,19 @@
+<section class="potholes-list-card">
+  <h2>Potholes</h2>
+  <app-message-list></app-message-list>
+
+  <p *ngIf="isLoading()">Loading potholes...</p>
+
+  <div *ngIf="!isLoading() && potholes.length === 0" class="empty-state">
+    <p>No potholes found yet.</p>
+  </div>
+
+  <ul *ngIf="!isLoading() && potholes.length > 0" class="potholes-list">
+    <li *ngFor="let pothole of potholes" class="pothole-item">
+      <div class="pothole-main">
+        <strong>{{ pothole.description }}</strong>
+        <span class="pothole-date">{{ pothole.createdDate | date:'medium' }}</span>
+      </div>
+    </li>
+  </ul>
+</section>

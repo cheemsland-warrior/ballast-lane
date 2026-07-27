@@ -1,0 +1,46 @@
+.login-card {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #d8dce6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field input {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #cfd5df;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-field small {
+  color: #d9534f;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

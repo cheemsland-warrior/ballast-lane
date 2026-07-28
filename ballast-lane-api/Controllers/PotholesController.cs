@@ -12,7 +12,7 @@ namespace BallastLaneApi.Controllers
     [Route("api/[controller]")]
     public class PotholesController : ControllerBase
     {
-    private readonly ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
         private readonly BallastLaneApi.Services.IPotholeService _potholes;
         private readonly IMapper _mapper;
 
@@ -58,6 +58,32 @@ namespace BallastLaneApi.Controllers
                 var created = await _potholes.CreateAsync(item);
                 var dto = _mapper.Map<PotholeDto>(created);
                 return CreatedAtAction(nameof(GetById), new { id = created.Id }, dto);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message);
+            }
+        }
+
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<IActionResult> Delete([FromRoute] string id)
+        {
+            try
+            {
+                // Ensure the user is the authenticated user
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrWhiteSpace(userId)) return Forbid();
+
+
+                await _potholes.DeleteAsync(id);
+
+                return Ok();
             }
             catch (ArgumentException ex)
             {

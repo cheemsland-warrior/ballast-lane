@@ -1,0 +1,46 @@
+# Prompt 1
+# DEBUGGER CONTEXT
+## EXCEPTION
+Exception Type: System.ArgumentException
+Exception Message: An item with the same key has already been added. Key: v1
+The callstack context, if included, corresponds to the thread where this exception occurred. There is no need to identify this thread by other means.
+The top most frame in the callstack context should correspond to the place the exception message was thrown from. Code may or may not have been provided for it but can be requested.
+
+## CALLSTACK
+Thread ID: 12352
+[1] [External Code]
+[2] ballast-lane-api.dll!API.Extensions.SwaggerServiceExtensions.AddSwaggerExtension.AnonymousMethod__0_0
+This is the current user focused stack frame. The provided locals context corresponds to this stack frame, but you may evaluate expressions and retrieve code for any frame.
+Code for the stack frame:
+```csharp ballast-lane-api\SwaggerServiceExtensions.cs
+12:         public static IServiceCollection AddSwaggerExtension(this IServiceCollection services)
+13:         {
+14:             services.AddSwaggerGen(c =>
+15:             {
+16:                 c.SwaggerDoc("v1", new OpenApiInfo
+17:                 {
+18:                     Version = "v1",
+19:                     Title = "API",
+20:                     Description = "ASP.NET Core Web API",
+21:                 });
+22: 
+23:               
+24: 
+25:                
+26:             });
+27: 
+28:             return services;
+29:         }
+```
+Current statement: lines 16-21
+[3] [External Code]
+
+## LOCALS
+Variable: 'c' of type 'Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions' is a complex object with child properties and has value: {Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions}
+
+
+# Prompt 2
+Analyze the current exception
+
+# Prompt 3
+GIve me a txt file with the prompts I have made so far in this session

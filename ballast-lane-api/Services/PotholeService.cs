@@ -37,7 +37,7 @@ namespace BallastLaneApi.Services
             var user = await _db.Users.FindAsync(pothole.UserId);
             if (user == null) throw new InvalidOperationException("User not found for UserId.");
 
-            pothole.Id = string.IsNullOrWhiteSpace(pothole.Id) ? Guid.NewGuid().ToString() : pothole.Id;
+            pothole.Id = Guid.NewGuid().ToString();
             pothole.CreatedDate = DateTime.UtcNow;
 
             _db.Potholes.Add(pothole);

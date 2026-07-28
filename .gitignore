@@ -1,6 +1,29 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-/.vs/*
 
+# ==========================================
+# .NET WEB API & VISUAL STUDIO
+# ==========================================
+.vs/
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet Packages
+*.nupkg
+.nuget/
+packages/
+
+# Local configuration (Optional but recommended)
+# appsettings.Development.json
+
+# ==========================================
+# ANGULAR & NODE
+# ==========================================
 # Compiled output
 /dist
 /tmp
@@ -12,7 +35,9 @@
 npm-debug.log
 yarn-error.log
 
-# IDEs and editors
+# ==========================================
+# IDES AND EDITORS
+# ==========================================
 .idea/
 .project
 .classpath
@@ -29,7 +54,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
+# ==========================================
+# MISCELLANEOUS
+# ==========================================
 /.angular/cache
 .scss-cache/
 /connect.lock
@@ -37,6 +64,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+.env
 
 # System files
 .DS_Store

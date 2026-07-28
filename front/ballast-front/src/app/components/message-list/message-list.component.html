@@ -1,0 +1,6 @@
+<div class="message-list" *ngIf="(messages$ | async)?.length">
+  <div *ngFor="let message of messages$ | async" class="message" [ngClass]="message.type">
+    <span>{{ message.text }}</span>
+    <button type="button" (click)="dismiss(message.id)">×</button>
+  </div>
+</div>

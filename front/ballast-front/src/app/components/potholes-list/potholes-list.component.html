@@ -1,0 +1,30 @@
+<section class="potholes-list-card">
+  <div class="potholes-list-actions">
+    <h2>Potholes</h2>
+    <a class="create-pothole-link" routerLink="/create-pothole">Create pothole</a>
+  </div>
+  <app-message-list></app-message-list>
+
+  <!-- Read-only Map displaying the markers -->
+  <div class="map-container"
+       leaflet
+       [leafletOptions]="mapOptions"
+       [leafletLayers]="mapLayers">
+  </div>
+
+  <p *ngIf="isLoading()">Loading potholes...</p>
+
+  <div *ngIf="!isLoading() && potholes.length === 0" class="empty-state">
+    <p>No potholes found yet.</p>
+  </div>
+
+  <ul *ngIf="!isLoading() && potholes.length > 0" class="potholes-list">
+    <li *ngFor="let pothole of potholes" class="pothole-item">
+      <div class="pothole-main">
+        <strong>{{ pothole.description }}</strong>
+        <span class="pothole-date">{{ pothole.createdDate | date:'medium' }}</span>
+      </div>
+      <button type="button" class="delete-button" (click)="deletePothole(pothole.id)">Delete</button>
+    </li>
+  </ul>
+</section>

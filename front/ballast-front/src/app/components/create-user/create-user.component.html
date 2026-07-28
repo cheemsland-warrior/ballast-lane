@@ -1,0 +1,31 @@
+<section class="user-form-card">
+  <h2>Create user</h2>
+  <p>Register a new account through the ballast lane API.</p>
+
+  <app-message-list></app-message-list>
+
+  <form [formGroup]="userForm" (ngSubmit)="submit()" novalidate>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="you@example.com" />
+      <small *ngIf="userForm.get('email')?.touched && userForm.get('email')?.hasError('required')">Email is required.</small>
+      <small *ngIf="userForm.get('email')?.touched && userForm.get('email')?.hasError('email')">Please enter a valid email address.</small>
+    </div>
+
+    <div class="form-field">
+      <label for="displayName">Display name</label>
+      <input id="displayName" type="text" formControlName="displayName" placeholder="Jane Doe" />
+      <small *ngIf="userForm.get('displayName')?.touched && userForm.get('displayName')?.hasError('required')">Display name is required.</small>
+      <small *ngIf="userForm.get('displayName')?.touched && userForm.get('displayName')?.hasError('minlength')">Display name must be at least 2 characters.</small>
+    </div>
+
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Enter password" />
+      <small *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('required')">Password is required.</small>
+      <small *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('minlength')">Password must be at least 6 characters.</small>
+    </div>
+
+    <button type="submit" [disabled]="isSubmitting">{{ isSubmitting ? 'Creating...' : 'Create user' }}</button>
+  </form>
+</section>

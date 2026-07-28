@@ -1,0 +1,46 @@
+<section class="pothole-form-card">
+  <h2>Create pothole</h2>
+  <p>Click on the map to pinpoint the pothole location.</p>
+
+  <app-message-list></app-message-list>
+
+  <!-- Interactive Map -->
+  <div class="map-container"
+       leaflet
+       [leafletOptions]="mapOptions"
+       [leafletLayers]="mapLayers"
+       (leafletClick)="onMapClick($event)">
+  </div>
+
+  <form [formGroup]="potholeForm" (ngSubmit)="submit()" novalidate>
+    <div class="form-field">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" rows="3" placeholder="Describe the issue"></textarea>
+      <small *ngIf="potholeForm.get('description')?.touched && potholeForm.get('description')?.hasError('required')">Description is required.</small>
+      <small *ngIf="potholeForm.get('description')?.touched && potholeForm.get('description')?.hasError('minlength')">Description must be at least 3 characters.</small>
+    </div>
+
+    <!-- Grouping Coordinates -->
+    <div class="coordinates-group">
+      <div class="form-field">
+        <label for="latitude">Latitude</label>
+        <input id="latitude" type="number" formControlName="latitude" readonly placeholder="Set by map" />
+        <small *ngIf="potholeForm.get('latitude')?.touched && potholeForm.get('latitude')?.hasError('required')">Latitude is required.</small>
+      </div>
+
+      <div class="form-field">
+        <label for="longitude">Longitude</label>
+        <input id="longitude" type="number" formControlName="longitude" readonly placeholder="Set by map" />
+        <small *ngIf="potholeForm.get('longitude')?.touched && potholeForm.get('longitude')?.hasError('required')">Longitude is required.</small>
+      </div>
+    </div>
+
+    <div class="form-field" style="display: none;">
+      <!-- Hidden status since it's hardcoded to 'Reported', or remove display:none if you want it visible -->
+      <label for="status">Status</label>
+      <input id="status" type="text" formControlName="status" />
+    </div>
+
+    <button type="submit" [disabled]="isSubmitting">{{ isSubmitting ? 'Creating...' : 'Create pothole' }}</button>
+  </form>
+</section>

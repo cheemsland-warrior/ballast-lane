@@ -1,0 +1,98 @@
+.potholes-list-card {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #d8dce6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.potholes-list-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.potholes-list-actions h2 {
+  margin: 0;
+}
+
+.create-pothole-link {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.create-pothole-link:hover {
+  opacity: 0.95;
+}
+
+.map-container {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  border: 1px solid #cfd5df;
+  z-index: 1; /* Prevents Leaflet's UI from overlapping Angular menus */
+}
+
+.potholes-list-card ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pothole-item {
+  padding: 0.9rem 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pothole-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.delete-button {
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+  border: 1px solid #991b1b;
+  color: #fff;
+  padding: 0.5rem 0.85rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 4px 10px rgba(185, 28, 28, 0.2);
+}
+
+.delete-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.delete-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(185, 28, 28, 0.3);
+}
+
+.pothole-date {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  color: #64748b;
+}

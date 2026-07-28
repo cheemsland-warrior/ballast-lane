@@ -1,0 +1,10 @@
+<header class="app-header">
+  <a routerLink="/" class="brand">Ballast Lane</a>
+
+  <div class="header-actions">
+    <span *ngIf="isLoggedIn" class="user-email">{{ currentUserEmail }}</span>
+    <a *ngIf="!isLoggedIn" routerLink="/create-user">Create user</a>
+    <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+    <button *ngIf="isLoggedIn" type="button" (click)="logout()">Logout</button>
+  </div>
+</header>

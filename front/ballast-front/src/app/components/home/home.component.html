@@ -1,0 +1,9 @@
+<section class="home-card">
+  <h2>Ballast Lane</h2>
+  <p>Choose where you want to go.</p>
+
+  <nav class="home-links">
+    <a routerLink="/potholes-list">View potholes</a>
+    <a *ngIf="isLoggedIn" routerLink="/create-pothole">Create pothole</a>
+  </nav>
+</section>

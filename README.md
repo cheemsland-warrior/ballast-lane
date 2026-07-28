@@ -1,4 +1,6 @@
-This is a test project to showcase my skills as a full stack developer. The project is composed of a Web API project in .net core which uses entity framework and PostgreSQL as the database
+This is a test project to showcase my skills as a full stack developer. The purpose of the platform is to provide a service that allows the user to register potholes in the city. 
+This is something that can be useful for government agencies or for people to be careful where they are driving. It is a toy project but it has potential
+The project is composed of a Web API project in .net core which uses entity framework and PostgreSQL as the database
 and angular for the project front end. When running the .net project and angular front end be sure to check that the .net project is ran in https://localhost:7296/ it should be that by default
 but if by any chance the .net project is ran in a different port be sure to change that in base.service.ts in the angular code.
 

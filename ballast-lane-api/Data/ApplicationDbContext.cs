@@ -17,14 +17,19 @@ namespace BallastLaneApi.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            var isPostgres = Database.IsNpgsql();
+
             modelBuilder.Entity<User>(b =>
             {
                 b.HasKey(u => u.Id);
                 b.Property(u => u.Email).IsRequired();
                 b.Property(u => u.DisplayName).IsRequired(false);
-                b.Property(u => u.CreatedDate).HasDefaultValueSql("now()");
-                b.Property(u => u.PasswordHash).HasColumnType("bytea");
-                b.Property(u => u.PasswordSalt).HasColumnType("bytea");
+                b.Property(u => u.CreatedDate).HasDefaultValue(DateTime.Now);
+                if (isPostgres)
+                {
+                    b.Property(u => u.PasswordHash).HasColumnType("bytea");
+                    b.Property(u => u.PasswordSalt).HasColumnType("bytea");
+                }
             });
 
             modelBuilder.Entity<Pothole>(b =>
@@ -32,12 +37,20 @@ namespace BallastLaneApi.Data
                 b.HasKey(p => p.Id);
                 b.Property(p => p.Description).HasMaxLength(500);
 
-                // Explicitly tell Postgres these are high-precision map values
-                b.Property(p => p.Latitude).HasColumnType("double precision").IsRequired();
-                b.Property(p => p.Longitude).HasColumnType("double precision").IsRequired();
+                if (isPostgres)
+                {
+                    // Explicitly tell Postgres these are high-precision map values
+                    b.Property(p => p.Latitude).HasColumnType("double precision").IsRequired();
+                    b.Property(p => p.Longitude).HasColumnType("double precision").IsRequired();
+                }
+                else
+                {
+                    b.Property(p => p.Latitude).IsRequired();
+                    b.Property(p => p.Longitude).IsRequired();
+                }
 
                 b.Property(p => p.Status).HasDefaultValue("Reported");
-                b.Property(p => p.CreatedDate).HasDefaultValueSql("now()");
+                b.Property(p => p.CreatedDate).HasDefaultValue(DateTime.Now);
 
                 // Establish one-to-many relationship (One user can report many potholes)
                 b.HasOne(p => p.User)
